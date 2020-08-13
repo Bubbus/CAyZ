@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=1352;
+		nextID=1356;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15945.771,375.16077,14945.809};
-		dir[]={-0.88089532,-0.46336886,-0.096866041};
-		up[]={-0.46060222,0.8861649,-0.050649505};
-		aside[]={-0.10930881,4.4761691e-008,0.99405473};
+		pos[]={15988.031,418.66498,14946.289};
+		dir[]={-0.79943478,-0.55072075,-0.24017031};
+		up[]={-0.52743852,0.83469033,-0.15845603};
+		aside[]={-0.28773436,1.1199154e-007,0.95775908};
 	};
 };
 binarizationWanted=0;
@@ -36,13 +36,15 @@ addons[]=
 	"A3_Supplies_F_Orange_Ammoboxes",
 	"AICommand",
 	"3den_Objects",
-	"A3_Structures_F_Bootcamp_VR_Helpers"
+	"A3_Structures_F_Bootcamp_VR_Helpers",
+	"A3_Modules_F_Curator_Misc",
+	"Desert"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -122,6 +124,11 @@ class AddonsMetaData
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="Desert";
+			name="Desert";
 		};
 	};
 };
@@ -4761,7 +4768,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=25;
+		items=29;
 		class Item0
 		{
 			dataType="Logic";
@@ -7856,6 +7863,53 @@ class Mission
 				};
 				nAttributes=5;
 			};
+		};
+		class Item25
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15273.262,346.76001,16463.793};
+			};
+			areaSize[]={3208.2554,0,2435.6497};
+			areaIsRectangle=1;
+			flags=1;
+			id=1352;
+			type="ModuleCoverMap_F";
+			atlOffset=318.78882;
+		};
+		class Item26
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={15309.905,21.924,16423.482};
+			};
+			description="Initial AO size for Iteration 1 - includes most things we've planned in setpieces.";
+			id=1353;
+			atlOffset=4.196167e-005;
+		};
+		class Item27
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={15880.421,301.54559,14921.525};
+				angles[]={0.074861616,0,6.2515287};
+			};
+			description="Megasquad of campers - structure to develop organically?";
+			id=1354;
+		};
+		class Item28
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={15848.924,304.45999,14909.206};
+			};
+			description="Respawn mode TBA.";
+			id=1355;
+			atlOffset=-0.00036621094;
 		};
 	};
 	class Connections
