@@ -1,7 +1,7 @@
 
 // Enable players to edit their view distance settings via the ACE self-interact menu.
 // To disable the view-distance editor, comment-out or delete the line below INSTEAD of setting it to 0.
-#define ENABLE_VIEWDISTANCE_EDITOR 1
+// #define ENABLE_VIEWDISTANCE_EDITOR 1
 
 // When enabled, only units with the following variable can use the view-distande editor.  Use for pilots, snipers, tankers etc...
 // this setVariable ["f_var_allowViewDistanceEditing", true];

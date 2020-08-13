@@ -52,8 +52,8 @@ f_radios_settings_acre2_languages =
 // defines the language that a player can speak.
 // can define multiple
 f_radios_settings_acre2_language_blufor = ["blu"];
-f_radios_settings_acre2_language_opfor = ["ind"];
-f_radios_settings_acre2_language_indfor = ["opf"];
+f_radios_settings_acre2_language_opfor = ["blu"];
+f_radios_settings_acre2_language_indfor = ["blu"];
 
 // Channel names and group defaults
 // first item in the array will correspond to the first channel
@@ -62,10 +62,7 @@ f_radios_settings_acre2_language_indfor = ["opf"];
 // also note these only work if f_radios_settings_acre2_disableFrequencySplit is set to false
 f_radios_settings_acre2_sr_groups_blufor =
 [
-    ["ALPHA",    ["ALPHA"]],
-    ["BRAVO",    ["BRAVO"]],
-    ["CHARLIE",    ["CHARLIE"]],
-    ["COMMAND",    ["COMMAND"]]
+    ["Campers",    ["Campers"]]
 ];
 
 f_radios_settings_acre2_sr_groups_opfor = f_radios_settings_acre2_sr_groups_blufor;
@@ -73,7 +70,7 @@ f_radios_settings_acre2_sr_groups_indfor = f_radios_settings_acre2_sr_groups_blu
 
 f_radios_settings_acre2_lr_groups_blufor =
 [
-    ["GROUND",    ["ALPHA", "BRAVO", "CHARLIE", "COMMAND"]],
+    ["GROUND",    ["Campers"]],
 	["HOTLINE ZEUS",    ["ZEUS"]]
 ];
 

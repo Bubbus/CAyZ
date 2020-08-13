@@ -6,4 +6,4 @@ f_var_respawnInGroup = true;
 f_var_JIPTeleport = true;
 
 // When a player respawns, do they get to teleport to a group of their choosing?
-f_var_RespawnTeleport = true;
+f_var_RespawnTeleport = false;
