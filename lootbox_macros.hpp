@@ -2,9 +2,9 @@
 #define LOOTBOX_VAR_DYNAMIC(NAME) (missionNamespace getVariable [format ["f_lootbox_%1", NAME], []])
 
 #define WHITE 100
-#define GREEN 20
-#define BLUE 10
-#define PURPLE 2
+#define GREEN 50
+#define BLUE 20
+#define PURPLE 5
 #define ORANGE 1
 
 #define LOOT_BOX "lootBox"

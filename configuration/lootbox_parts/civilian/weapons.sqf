@@ -9,7 +9,9 @@ _civ_precisionScopeAccessories = _group;
 
 _list = LOOTLIST(1);
 ADD_TO_LOOTLIST(_list, ITEM("optic_khs_old"), WHITE);
-ADD_TO_LOOTLIST(_list, ITEM("optic_khs_blk"), BLUE);
+ADD_TO_LOOTLIST(_list, ITEM("optic_khs_blk"), GREEN);
+ADD_TO_LOOTLIST(_list, ITEM("optic_dms_weathered_f"), BLUE);
+ADD_TO_LOOTLIST(_list, ITEM("optic_ams"), PURPLE);
 _civ_precisionScope = _list;
 
 _group = LOOTGROUP();
@@ -80,7 +82,7 @@ _civ_ruka = _group;
 
 _list = LOOTLIST(1);
 ADD_TO_LOOTLIST(_list, _civ_cv557, WHITE);
-ADD_TO_LOOTLIST(_list, _civ_enfield, BLUE);
+ADD_TO_LOOTLIST(_list, _civ_enfield, GREEN);
 ADD_TO_LOOTLIST(_list, _civ_m14, BLUE);
 _civ_randomRifle = _list;
 
@@ -97,7 +99,7 @@ _civ_randomLongGun = _list;
 _list = LOOTLIST(1);
 ADD_TO_LOOTLIST(_list, _civ_tt33, WHITE);
 ADD_TO_LOOTLIST(_list, _civ_nambu, WHITE);
-ADD_TO_LOOTLIST(_list, _civ_ruka, BLUE);
+ADD_TO_LOOTLIST(_list, _civ_ruka, GREEN);
 _civ_randomPistol = _list;
 
 // END: Farmer gun loot tables
