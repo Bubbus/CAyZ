@@ -337,3 +337,45 @@ ADD_TO_LOOTLIST(_list, _civ_highTierVests, BLUE);
 _civ_vests = _list;
 
 // END: Vest mash-up tables
+
+
+
+
+// START: Hat loot tables.
+
+_list = LOOTLIST(1);
+ADD_TO_LOOTLIST(_list, ITEM("VSM_Beanie_Black"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("VSM_Beanie_OD"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("VSM_Beanie_tan"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("rhs_beanie_green"), WHITE);
+_civ_beanies = _list;
+
+_list = LOOTLIST(1);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_grn_BI"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_blk"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_Black_IDAP_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_Orange_IDAP_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_grn"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_khaki_specops_UK"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Cap_surfer"), WHITE);
+_civ_caps = _list;
+
+_list = LOOTLIST(1);
+ADD_TO_LOOTLIST(_list, ITEM("H_Hat_brown"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Hat_checker"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Hat_grey"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Hat_tan"), WHITE);
+_civ_fancyHats = _list;
+
+_list = LOOTLIST(1);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_basic_orange_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_basic_red_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_basic_vrana_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_basic_yellow_F"), WHITE);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_earprot_orange_F"), GREEN);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_earprot_red_F"), GREEN);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_earprot_vrana_F"), GREEN);
+ADD_TO_LOOTLIST(_list, ITEM("H_Construction_earprot_yellow_F"), GREEN);
+_civ_workerHats = _list;
+
+// END: Hat loot tables.

@@ -1,10 +1,11 @@
 // LOAD IN DEPENDENCY ORDER
 
-// Civilian - no deps
+#include "medical.sqf"
+
 #include "civilian\includes.sqf"
 
-//#include "military\includes.sqf"
+#include "military\includes.sqf"
 
-//#include "police\includes.sqf"
+#include "police\includes.sqf"
 
-//#include "survivor\includes.sqf"
+#include "survivor\includes.sqf"
