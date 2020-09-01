@@ -31,8 +31,9 @@ _spawnpos = _posdir select 0;
 switch(_side) do
 {
 	case west: {_group = createGroup [west,true]; _unittype = "B_Soldier_F";};
-	case east: {_group = createGroup [east,true]; _unittype = "O_Soldier_F";};
-	case independent: {_group = createGroup [independent,true]; _unittype = "I_Soldier_F";};
+	case east: {_group = createGroup [east,true]; _unittype = "O_G_Soldier_F";};
+	case independent: {_group = createGroup [independent,true]; _unittype = "I_G_Soldier_F";};
+	case civilian: {_group = createGroup [civilian,true]; _unittype = "C_man_polo_2_F_euro";};
 	default {_group = createGroup [east,true]};
 
 };
@@ -44,7 +45,15 @@ switch(_side) do
 
     if (_faction == "") then
     {
-        _faction = faction _unit;
+        _faction = switch (_side) do
+		{
+			case west: {"blu_f"};
+			case east: {"opf_f"};
+			case independent: {"ind_f"};
+			case civilian: {"civ_f"};
+			default {"ind_g_f"};
+
+		};;
     };
 
 	_type = _x;
@@ -57,8 +66,8 @@ switch(_side) do
 _group setFormation "LINE";
 
 
-_group spawn f_fnc_groupGuerrillaAI;
-_group spawn f_fnc_groupSuppressiveAI;
+//_group spawn f_fnc_groupGuerrillaAI;
+//_group spawn f_fnc_groupSuppressiveAI;
 
 //[_group] remoteExec ["bub_fnc_addGroupToZeus", 2];
 

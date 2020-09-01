@@ -149,3 +149,9 @@ ADD_HAT(poshboy,"H_Hat_brown");
 ADD_HAT(poshboy,"H_Hat_checker");
 ADD_HAT(poshboy,"H_Hat_grey");
 ADD_HAT(poshboy,"H_Hat_tan");
+
+
+// Default loadout.
+// If Gearscript tries to use an invalid loadout, it will fall-back to this default loadout instead.
+
+COPY_LOADOUT(default,civ);
