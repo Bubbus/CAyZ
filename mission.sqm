@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1622;
+		nextID=1642;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14676.627,122.5732,16207.585};
-		dir[]={0.55862319,-0.52449644,0.64271337};
-		up[]={0.34412375,0.85137159,0.39592874};
-		aside[]={0.75486112,-1.1152588e-007,-0.65608561};
+		pos[]={15570.159,57.727264,17510.012};
+		dir[]={-0.39098349,-0.66868079,-0.63264877};
+		up[]={-0.3515538,0.74351829,-0.56884855};
+		aside[]={-0.85077697,-2.7809292e-006,0.5257799};
 	};
 };
 binarizationWanted=0;
@@ -72,13 +72,14 @@ addons[]=
 	"CUP_CAStructures_E_Misc_Misc_Garbage",
 	"CUP_CAStructures_E_Misc_Misc_Interier",
 	"CUP_CAMisc",
-	"A3_Data_F_ParticleEffects"
+	"A3_Data_F_ParticleEffects",
+	"flk_ships"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=37;
+		items=38;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -317,6 +318,11 @@ class AddonsMetaData
 			name="Arma 3 - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item37
+		{
+			className="flk_ships";
+			name="flk_ships";
 		};
 	};
 };
@@ -4956,7 +4962,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=169;
+		items=175;
 		class Item0
 		{
 			dataType="Logic";
@@ -10570,7 +10576,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14793.813,56.484974,16267.336};
-				angles[]={-0,1.6786537,0};
+				angles[]={0,1.6786537,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10704,7 +10710,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14792.463,56.54977,16269.989};
-				angles[]={-0,0.74929523,0};
+				angles[]={0,0.74929523,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10721,7 +10727,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14797.031,56.754654,16269.151};
-				angles[]={-0,1.4178884,0};
+				angles[]={0,1.4178884,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10796,6 +10802,103 @@ class Mission
 			};
 			id=1594;
 			type="Land_Misc_Cargo1A_ruins_EP1";
+		};
+		class Item169
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15718.398,12.139097,17191.027};
+				angles[]={0,1.1443843,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1625;
+			type="Plym";
+			atlOffset=7.2262821;
+		};
+		class Item170
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15710.341,14.291983,17267.498};
+				angles[]={0,4.2448692,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1633;
+			type="Elk";
+			atlOffset=7;
+		};
+		class Item171
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15833.563,17.722919,17110.697};
+				angles[]={0,3.9450924,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1635;
+			type="RFA_FG";
+			atlOffset=6.9668531;
+		};
+		class Item172
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17895.914,26.061529,16554.361};
+				angles[]={0,4.1403847,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1636;
+			type="Canberra";
+			atlOffset=11.608589;
+		};
+		class Item173
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16353.977,3.1815238,16400.775};
+				angles[]={5.1143951,4.817625,0.20737323};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1640;
+			type="Type21";
+			atlOffset=-4.2999487;
+		};
+		class Item174
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15909.251,14.081626,16997.877};
+				angles[]={0,0.80285275,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1641;
+			type="Sir";
+			atlOffset=7;
 		};
 	};
 	class Connections
