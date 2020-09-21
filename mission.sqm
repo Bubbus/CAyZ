@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=1642;
+		nextID=1644;
 	};
 	class MarkerIDProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={15570.159,57.727264,17510.012};
-		dir[]={-0.39098349,-0.66868079,-0.63264877};
-		up[]={-0.3515538,0.74351829,-0.56884855};
-		aside[]={-0.85077697,-2.7809292e-006,0.5257799};
+		pos[]={15133.087,245.89204,17759.264};
+		dir[]={0.79495448,-0.39851764,-0.45743495};
+		up[]={0.3454203,0.91715729,-0.19876258};
+		aside[]={-0.49875116,2.3120083e-007,-0.86675775};
 	};
 };
 binarizationWanted=0;
@@ -4962,7 +4962,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=175;
+		items=176;
 		class Item0
 		{
 			dataType="Logic";
@@ -9719,17 +9719,40 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15600.359,281.99451,14796.339};
-				angles[]={0.063249089,2.1678436,6.2731848};
+				position[]={15600.359,281.99454,14796.339};
+				angles[]={0.063250735,2.1678386,6.2731848};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				fuel=0.39042491;
 			};
 			id=1500;
 			type="C_Quadbike_01_F";
-			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item127
 		{
@@ -9753,15 +9776,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15595.656,282.26672,14792.38};
-				angles[]={0.064905055,2.675982,6.278194};
+				angles[]={0.064908795,2.6759739,6.2781935};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				fuel=0.22746687;
 			};
 			id=1502;
 			type="C_Quadbike_01_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item129
 		{
@@ -10817,7 +10864,7 @@ class Mission
 			};
 			id=1625;
 			type="Plym";
-			atlOffset=7.2262821;
+			atlOffset=7.2262816;
 		};
 		class Item170
 		{
@@ -10898,6 +10945,15 @@ class Mission
 			};
 			id=1641;
 			type="Sir";
+			atlOffset=7;
+		};
+		class Item175
+		{
+			dataType="Marker";
+			position[]={15853.355,0,17437.299};
+			name="lightsmarker";
+			type="Empty";
+			id=1643;
 			atlOffset=7;
 		};
 	};
