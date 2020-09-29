@@ -30,16 +30,27 @@ _group = LOOTGROUP();
 ADD_TO_LOOTGROUP(_group, ITEM("Cre8ive_Rfl_CV_557"));
 ADD_TO_LOOTGROUP(_group, ITEMS("Cre8ive_Mag_CV_557_5Rnd",RANGE(6,8)));
 ADD_TO_LOOTGROUP(_group, ITEMS("Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",RANGE(2,4)));
+_civ_cv557 = _group;
+
+_group = LOOTGROUP();
+ADD_TO_LOOTGROUP(_group, ITEM("Cre8ive_Rfl_CV_557"));
+ADD_TO_LOOTGROUP(_group, ITEMS("Cre8ive_Mag_CV_557_5Rnd",RANGE(6,8)));
+ADD_TO_LOOTGROUP(_group, ITEMS("Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",RANGE(2,4)));
 ADD_TO_LOOTGROUP(_group, ITEM("optic_khs_blk"));
 ADD_TO_LOOTGROUP(_group, _civ_precisionScopeAccessories);
-_civ_cv557 = _group;
+_civ_cv557_rare = _group;
+
+_group = LOOTGROUP();
+ADD_TO_LOOTGROUP(_group, ITEM("rhs_weap_m14_ris"));
+ADD_TO_LOOTGROUP(_group, ITEMS("10Rnd_Mk14_762x51_Mag",RANGE(5,7)));
+_civ_m14 = _group;
 
 _group = LOOTGROUP();
 ADD_TO_LOOTGROUP(_group, ITEM("rhs_weap_m14_ris"));
 ADD_TO_LOOTGROUP(_group, ITEMS("10Rnd_Mk14_762x51_Mag",RANGE(5,7)));
 ADD_TO_LOOTGROUP(_group, ITEM("optic_khs_old"));
 ADD_TO_LOOTGROUP(_group, _civ_precisionScopeAccessories);
-_civ_m14 = _group;
+_civ_m14_rare = _group;
 
 _group = LOOTGROUP();
 ADD_TO_LOOTGROUP(_group, ITEM("Cre8ive_Rfl_CV_Goose"));
@@ -84,6 +95,8 @@ _list = LOOTLIST(1);
 ADD_TO_LOOTLIST(_list, _civ_cv557, WHITE);
 ADD_TO_LOOTLIST(_list, _civ_enfield, GREEN);
 ADD_TO_LOOTLIST(_list, _civ_m14, BLUE);
+ADD_TO_LOOTLIST(_list, _civ_cv557_rare, BLUE);
+ADD_TO_LOOTLIST(_list, _civ_m14_rare, PURPLE);
 _civ_randomRifle = _list;
 
 _list = LOOTLIST(1);
