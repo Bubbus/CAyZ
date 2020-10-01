@@ -1,5 +1,7 @@
 // by ALIAS
 
+var_burperAnomaly_visibleDistance = 300;
+
 fnc_burperAnomaly_sfx_primar =
 {
 	private ["_obj_sfx_princ","_work_primar","_source_burp","_spot_lit","_r_col_burp","_g_col_burp","_b_col_burp","_brit_burp"];
@@ -75,7 +77,7 @@ fnc_burperAnomaly_sfx_secundar =
 	_work_sfx_sec = _this select 0;
 	_obj_sfx_sec = _this select 1;
 
-	while {(alive _work_sfx_sec) and {(player distance _work_sfx_sec) < 1500}} do
+	while {(alive _work_sfx_sec) and {(player distance _work_sfx_sec) < var_burperAnomaly_visibleDistance}} do
 	{
 		if ((player distance _work_sfx_sec) < 100) then
 		{
@@ -136,18 +138,14 @@ fnc_burperAnomaly_anim_burp =
 	_obj_anim = _this select 0;
 	_work_obj = _this select 1;
 	_b_dir=0;
-	_h_bounce=0;
-	_sus= false;
 
-	while {(alive _work_obj) and {(player distance _obj_anim) < 1500}} do
+	while {(alive _work_obj) and {(player distance _obj_anim) < var_burperAnomaly_visibleDistance}} do
 	{
-		if ((_h_bounce<0.61) and !_sus) then {_h_bounce = _h_bounce+0.01};
-		if (_h_bounce>0.61) then {_sus=true};
-		if (_sus and (_h_bounce>0.2)) then {_h_bounce = _h_bounce-0.01};
-		if (_h_bounce<0.2) then {_sus=false};
 		_b_dir = _b_dir+2;
 		_obj_anim setdir _b_dir;
-		_obj_anim setPosATL [getposATL _obj_anim select 0,getposATL _obj_anim select 1,_h_bounce];
+
+		_height = 1 + (cos (time * 180)) * 0.6;
+		_obj_anim setPosATL [getposATL _obj_anim select 0, getposATL _obj_anim select 1, _height];
 		sleep 0.01;
 	};
 
@@ -162,7 +160,7 @@ _work_obj = _this select 0;
 
 while {alive _work_obj} do
 {
-	waitUntil {sleep 2; (player distance _work_obj) < 1500};
+	waitUntil {sleep 2; (player distance _work_obj) < var_burperAnomaly_visibleDistance};
 
 	_burper_obj_sec = createVehicle ["Sign_Sphere25cm_F", [getposATL _work_obj select 0,getposATL _work_obj select 1,0], [], 0, "CAN_COLLIDE"];
 	_burper_obj_sec setObjectMaterial [0,"A3\Structures_F\Data\Windows\window_set.rvmat"];

@@ -19,4 +19,5 @@ class miscShared
     class applyInsignia{};
     class formatTimeDuration{};
     class addObjectToAllZeuses{};
+    class woundUnitRandomly{};
 };

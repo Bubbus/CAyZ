@@ -1,4 +1,4 @@
-	
+
 if (!hasInterface) exitWith {};
 
 _splash_point = _this select 0;
@@ -21,3 +21,5 @@ sleep 0.2;
 deleteVehicle _meat_pieces;
 sleep 1;
 deleteVehicle _blood_splash;
+sleep 300;
+deleteVehicle _splash_point;

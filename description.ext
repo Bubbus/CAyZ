@@ -309,9 +309,10 @@ class CfgDebriefingSections
 // it will play until the file stops, Sounds cannot be interrupted
 // unless the object playing the sound is killed or otherwise destroyed.
 // Sound files can be played in 3D, and are an effect for volume purposes.
-//*
 class CfgSounds
 {
+	// START: Burper
+
 	class bones_drop
 	{
 		name = "bones_drop";
@@ -349,7 +350,6 @@ class CfgSounds
 		titles[] = {};
 	};
 
-// mediu
 	class 01_blast_mediu
 	{
 		name = "01_blast_mediu";
@@ -501,8 +501,179 @@ class CfgSounds
 		sound[] = {"\sounds\charge_b.ogg", db+5, 1};
 		titles[] = {};
 	};
+
+	// END: Burper
+
+
+
+	// START: Farty
+
+	class sfaraie_08
+	{
+		name = "sfaraie_08";
+		sound[] = {"\sounds\sfaraie_08.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class sfaraie_09
+	{
+		name = "sfaraie_09";
+		sound[] = {"\sounds\sfaraie_09.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_1
+	{
+		name = "acid_burn_1";
+		sound[] = {"\sounds\acid_burn_1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_2
+	{
+		name = "acid_burn_2";
+		sound[] = {"\sounds\acid_burn_2.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_3
+	{
+		name = "acid_burn_3";
+		sound[] = {"\sounds\acid_burn_3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_4
+	{
+		name = "acid_burn_4";
+		sound[] = {"\sounds\acid_burn_4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class toxic_field
+	{
+		name = "toxic_field";
+		sound[] = {"\sounds\toxic_field.ogg", 0.1, 1};
+		titles[] = {};
+	};
+	class breath_toxic
+	{
+		name = "breath_toxic";
+		sound[] = {"\sounds\breath_toxic.ogg", 0.6, 1.0};
+		titles[] = {0,""};
+	};
+	class dezechipare_toxic
+	{
+		name = "dezechipare_toxic";
+		sound[] = {"\sounds\dezechipare_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_breat_toxic
+	{
+		name = "01_breat_toxic";
+		sound[] = {"\sounds\01_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_breat_toxic
+	{
+		name = "02_breat_toxic";
+		sound[] = {"\sounds\02_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 03_breat_toxic
+	{
+		name = "03_breat_toxic";
+		sound[] = {"\sounds\03_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 04_breat_toxic
+	{
+		name = "04_breat_toxic";
+		sound[] = {"\sounds\04_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class NoSound
+	{
+		name = "NoSound";
+		sound[] = {"", 0, 1};
+		titles[] = {0, ""};
+	};
+	class puls_1
+	{
+		name = "puls_1";
+		sound[] = {"\sounds\puls_1.ogg", db+1, 1};
+		titles[] = {1, ""};
+	};
+	class echipare_toxic
+	{
+		name = "echipare_toxic";
+		sound[] = {"\sounds\echipare_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class voce_fart
+	{
+		name = "voce_fart";
+		sound[] = {"\sounds\voce_fart.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_anomaly_move
+	{
+		name = "01_anomaly_move";
+		sound[] = {"\sounds\01_anomaly_move.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_anomaly_move
+	{
+		name = "02_anomaly_move";
+		sound[] = {"\sounds\02_anomaly_move.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_fart_attack
+	{
+		name = "01_fart_attack";
+		sound[] = {"\sounds\01_fart_attack.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_fart_attack
+	{
+		name = "02_fart_attack";
+		sound[] = {"\sounds\02_fart_attack.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_strig_fart
+	{
+		name = "01_strig_fart";
+		sound[] = {"\sounds\01_strig_fart.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class sfaraie_01
+	{
+		name = "sfaraie_01";
+		sound[] = {"\sounds\sfaraie_01.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class farty_mort
+	{
+		name = "farty_mort";
+		sound[] = {"\sounds\farty_mort.ogg", db+20, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_1
+	{
+		name = "tuse_1";
+		sound[] = {"\sounds\tuse_1.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_2
+	{
+		name = "tuse_2";
+		sound[] = {"\sounds\tuse_2.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_3
+	{
+		name = "tuse_3";
+		sound[] = {"\sounds\tuse_3.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+
+	// END: Farty
+
 };
-//*/
 
 
 // ============================================================================================
