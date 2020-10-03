@@ -19,7 +19,7 @@ LOCAL_ONLY(_unit);
 [_unit, false] remoteExec ["allowDamage", 0, true];
 _unit setVariable ["ace_medical_allowDamage", false, true];
 
-[_unit, ["HandleDamage", {false}]] remoteExec ["addEventHandler", 0, true];
+[_unit, ["HandleDamage", {0}]] remoteExec ["addEventHandler", 0, true];
 
 
 if (isPlayer _unit) then

@@ -12,7 +12,7 @@ _getUnitDetails =
 	private "_side";
 	private "_name";
 
-	if (_unit isKindOf "Man") then
+	if (_unit isKindOf "CAManBase") then
 	{
 		_loadout = _unit getVariable ["f_var_assignGear",""];
 

@@ -4,7 +4,7 @@ _object_burp_damage = _this select 0;
 while {alive _object_burp_damage} do
 {
 	//_list_units_in_range = (position _object_burp_damage) nearEntities [["Man","LandVehicle"],9];
-	_list_units_in_range = (position _object_burp_damage) nearEntities ["Man",9];
+	_list_units_in_range = (position _object_burp_damage) nearEntities ["CAManBase",9];
 	_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["f_var_isZeus", false])}};
 
 	{

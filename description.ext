@@ -586,12 +586,6 @@ class CfgSounds
 		sound[] = {"\sounds\04_breat_toxic.ogg", 1, 1.0};
 		titles[] = {0,""};
 	};
-	class NoSound
-	{
-		name = "NoSound";
-		sound[] = {"", 0, 1};
-		titles[] = {0, ""};
-	};
 	class puls_1
 	{
 		name = "puls_1";
@@ -672,6 +666,97 @@ class CfgSounds
 	};
 
 	// END: Farty
+
+
+
+	// START: Flamer
+
+	class flamer_voice
+	{
+		name = "flamer_voice";
+		sound[] = {"\sounds\flamer_voice.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class 01_blast_2
+	{
+		name = "01_blast";
+		sound[] = {"\sounds\01_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class 02_blast_2
+	{
+		name = "2";
+		sound[] = {"\sounds\02_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class 03_blast_2
+	{
+		name = "03_blast";
+		sound[] = {"\sounds\03_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class furnal
+	{
+		name = "furnal";
+		sound[] = {"\sounds\furnal.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class burned
+	{
+		name = "burned";
+		sound[] = {"\sounds\burned.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class close_bomb
+	{
+		name = "close_bomb";
+		sound[] = {"\sounds\close_bomb.ogg",db+30, 1};
+		titles[] = {};
+	};
+	class eko_sharp
+	{
+		name = "eko_sharp";
+		sound[] = {"\sounds\eko_sharp.ogg",1, 1};
+		titles[] = {};
+	};
+	class eko_bomb
+	{
+		name = "eko_bomb";
+		sound[] = {"\sounds\eko_bomb.ogg",1, 1};
+		titles[] = {};
+	};
+	class foc_initial
+	{
+		name = "foc_initial";
+		sound[] = {"\sounds\foc_initial.ogg",1, 1};
+		titles[] = {};
+	};
+	class NoSound
+	{
+		name = "NoSound";
+		sound[] = {"", 0, 1};
+		titles[] = {0, ""};
+	};
+	class 02
+	{
+		name = "02";
+		sound[] = {"\sounds\02.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class 04
+	{
+		name = "04";
+		sound[] = {"\sounds\04.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class 03
+	{
+		name = "03";
+		sound[] = {"\sounds\03.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: Flamer
 
 };
 

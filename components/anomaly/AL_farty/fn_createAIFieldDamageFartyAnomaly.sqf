@@ -9,7 +9,7 @@ _radius_toxic	= _this select 2;
 
 while {true} do
 {
-	_list_ai_in_range_tox = _location_pos nearEntities [["Man"], _radius_toxic - 5];
+	_list_ai_in_range_tox = _location_pos nearEntities [["CAManBase"], _radius_toxic - 5];
 	_list_ai_in_range_tox = _list_ai_in_range_tox select {!(isPlayer _x)};
 
 	if (count _list_ai_in_range_tox > 0) then
