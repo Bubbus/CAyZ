@@ -1,6 +1,6 @@
 #include "macros.hpp"
 
-RUN_ON_SERVER(f_fnc_addObjectToAllZeuses,_this);
+RUN_ON_SERVER(f_fnc_addObjectsToAllZeuses,_this);
 
 SERVER_ONLY;
 

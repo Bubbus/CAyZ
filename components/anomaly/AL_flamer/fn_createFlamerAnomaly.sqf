@@ -8,7 +8,7 @@ if (!isServer) exitWith {};
 params ["_poz_orig_sc", "_teritoriu", "_damage_flamer", "_hp_flamer"];
 
 
-_origin_flamer = "Land_HelipadEmpty_F" createVehicle _poz_orig_sc;
+_origin_flamer = "Land_ClutterCutter_large_F" createVehicle _poz_orig_sc;
 
 _flamer = createAgent ["O_Soldier_VR_F", _poz_orig_sc, [], 0, "NONE"];
 _flamer setVariable ["ace_medical_allowDamage", false, true];
@@ -25,6 +25,7 @@ _flamer setUnitPos "UP";
 _flamer disableAI "ALL";
 _flamer setMass 7000;
 _flamer setVariable ["flamerState", "waiting", true];
+_flamer setAnimSpeedCoef 1.5;
 
 {
 	_flamer enableAI _x;
@@ -33,8 +34,39 @@ _flamer setVariable ["flamerState", "waiting", true];
 
 _flamer setVariable ["flamerHp", _hp_flamer ,true];
 
+
+
+
+
+[_origin_flamer, _flamer] spawn
+{
+	params ["_origin_flamer", "_flamer"];
+
+	_originPos = getPos _origin_flamer;
+
+	while {(alive _origin_flamer) and {alive _flamer}} do
+	{
+		waitUntil {sleep 1; !(getPos _origin_flamer isEqualTo _originPos)};
+		waitUntil {sleep 1; _flamer getVariable ["flamerState", ""] isEqualTo "waiting"};
+
+		_originPos = (getPos _origin_flamer);
+		_flamer setPos _originPos;
+
+	};
+
+	deleteVehicle _origin_flamer;
+	deleteVehicle _flamer;
+
+};
+
+
+
+
 _flamer removeAllEventHandlers "hit";
 _flamer addEventHandler ["Hit", { [_this select 0] remoteExec ["f_fnc_fxSplashHitFlamerAnomaly"] }];
+
+
+
 
 _flamerKilledHandler =
 {
@@ -64,6 +96,10 @@ _flamerKilledHandler =
 };
 
 _flamer addEventHandler ["Killed", _flamerKilledHandler];
+
+
+
+
 _flamer removeAllEventHandlers "HandleDamage";
 
 _flamerDamageHandler =
@@ -84,7 +120,9 @@ _flamerDamageHandler =
 
 _flamer addEventhandler ["HandleDamage", _flamerDamageHandler];
 
-_flamer setAnimSpeedCoef 1.5;
+
+
+
 
 _cap_flamer = "Land_HelipadEmpty_F" createVehicle [0,0,0];
 _cap_flamer attachto [_flamer, [0,0,0.2], "neck"];
@@ -93,66 +131,121 @@ _flamer setVariable ["_cap_flamer", _cap_flamer, true];
 for "_i" from 0 to 5 do
 {
 	_flamer setObjectMaterialGlobal [_i, "A3\Structures_F\Data\Windows\window_set.rvmat"];
-	_flamer setObjectTextureglobal [_i, "#(rgb,8,8,3)color(0,0,1,0)"];
+	_flamer setObjectTextureglobal [_i, "#(argb,8,8,3)color(0,0,0,0)"];
 };
 
 _flamer setVariable ["atk",false];
 _flamer call fnc_flamerAnomaly_hide_flamer;
 
-_list_unit_range_flamer = [];
-
 [_flamer] remoteExec ["f_fnc_fxOrbFlamerAnomaly"];
 
 
-while {alive _flamer} do
+
+
+(_this + [_flamer, _cap_flamer, _origin_flamer]) spawn
 {
-	private _tgt_flamer = objNull;
+	params ["_poz_orig_sc", "_teritoriu", "_damage_flamer", "_hp_flamer", "_flamer", "_cap_flamer", "_origin_flamer"];
 
-	waitUntil
+	_list_unit_range_flamer = [];
+
+	while {alive _flamer} do
 	{
-		_result = selectRandom ([_flamer, _teritoriu] call fnc_flamerAnomaly_find_target_flamer);
+		private _tgt_flamer = objNull;
 
-		if !((isNil '_result') or {isNull _result}) exitWith { _tgt_flamer = _result; true };
-
-		_players = allPlayers select {!(_x getVariable ["f_var_isZeus", false])};
-		_distances = allPlayers apply {_x distance _poz_orig_sc};
-		_closest = selectMin _distances;
-
-		sleep ((_closest / 100) min 10) max 2;
-		false
-	};
-
-	if !(isNull _tgt_flamer) then
-	{
-		_flamer setVariable ["atk",false];
-		_flamer call fnc_flamerAnomaly_hide_flamer;
-		_flamer setVariable ["flamerState", "hiding", true];
-
-		sleep 10;
-
-		_showPos = 0.5 bezierInterpolation [_poz_orig_sc, (getPos _tgt_flamer)];
-		[_flamer, _showPos, _teritoriu, _damage_flamer] call fnc_flamerAnomaly_show_flamer;
-
-		while {(!isNil "_tgt_flamer") && {(alive _flamer) && ((_tgt_flamer distance _poz_orig_sc) < _teritoriu)}} do
+		waitUntil
 		{
-			_flamer setVariable ["flamerState", "targeting", true];
-			_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
+			_result = selectRandom ([_flamer, _teritoriu] call fnc_flamerAnomaly_find_target_flamer);
 
+			if !((isNil '_result') or {isNull _result}) exitWith { _tgt_flamer = _result; true };
+
+			_players = allPlayers select {!(_x getVariable ["f_var_isZeus", false])};
+			_distances = allPlayers apply {_x distance _poz_orig_sc};
+			_closest = selectMin _distances;
+
+			sleep ((_closest / 100) min 10) max 2;
+			false
+		};
+
+		if !(isNull _tgt_flamer) then
+		{
+			_flamer setVariable ["atk",false];
+			_flamer call fnc_flamerAnomaly_hide_flamer;
+			_flamer setVariable ["flamerState", "hiding", true];
+
+			sleep 10;
+
+			_showPos = 0.5 bezierInterpolation [_poz_orig_sc, (getPos _tgt_flamer)];
+			[_flamer, _showPos, _teritoriu, _damage_flamer] call fnc_flamerAnomaly_show_flamer;
+
+			while {(!isNil "_tgt_flamer") && {(alive _flamer) && ((_tgt_flamer distance _poz_orig_sc) < _teritoriu)}} do
 			{
-				[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
-				_tip = selectrandom ["04","burned","02","03"];
-				[_x, [_tip,200]] remoteExec ["say3d"];
+				_flamer setVariable ["flamerState", "targeting", true];
+				_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
 
-			} forEach (_nearflamer - [_flamer]);
+				{
+					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+					_tip = selectrandom ["04","burned","02","03"];
+					[_x, [_tip,200]] remoteExec ["say3d"];
+
+				} forEach (_nearflamer - [_flamer]);
 
 
-			if (selectRandom [true,false,true,true,false]) then
-			{
-				_flamer moveTo AGLToASL (_tgt_flamer getRelPos [10,180]);
-				[_flamer, _tgt_flamer] call fnc_flamerAnomaly_avoid_flamer
-			}
-			else
-			{
+				if (selectRandom [true,false,true,true,false]) then
+				{
+					_flamer moveTo AGLToASL (_tgt_flamer getRelPos [10,180]);
+					[_flamer, _tgt_flamer] call fnc_flamerAnomaly_avoid_flamer
+				}
+				else
+				{
+					_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",7];
+
+					_didHurt = false;
+					{
+						[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+						_tip = selectrandom ["04","burned","02","03"];
+						[_x, [_tip,200]] remoteExec ["say3d"];
+						_didHurt = true;
+
+					} forEach (_nearflamer - [_flamer]);
+
+					if (_didHurt) then
+					{
+						[_flamer] remoteExec ["f_fnc_fxJumpFlamerAnomaly"];
+						[_flamer, _tgt_flamer, _cap_flamer] call fnc_flamerAnomaly_jump_flamer;
+
+						waitUntil {sleep 0.1; !(_flamer getVariable ["flamerState", ""] isEqualTo "jumping")};
+
+					};
+
+				};
+
+
+				_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
+				{
+					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+					_tip = selectrandom ["04","burned","02","03"];
+					[_x, [_tip,200]] remoteExec ["say3d"];
+
+				} forEach (_nearflamer - [_flamer]);
+
+				if ((_flamer distance _tgt_flamer < 15) && !(_flamer getVariable "atk")) then
+				{
+					_flamer setVariable ["atk",true];
+					[_flamer, _tgt_flamer, _damage_flamer] spawn fnc_flamerAnomaly_attack_flamer;
+
+					sleep 0.5;
+
+					[_tgt_flamer] remoteExec ["f_fnc_fxAttackFlamerAnomaly"];
+
+					[_flamer] remoteExec ["f_fnc_fxJumpFlamerAnomaly"];
+					[_flamer, _tgt_flamer, _cap_flamer] call fnc_flamerAnomaly_jump_flamer;
+
+					waitUntil {sleep 0.1; !(_flamer getVariable ["flamerState", ""] isEqualTo "jumping")};
+
+				};
+
+				sleep 1;
+
 				_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",7];
 
 				_didHurt = false;
@@ -173,92 +266,50 @@ while {alive _flamer} do
 
 				};
 
-			};
 
-
-			_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
-			{
-				[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
-				_tip = selectrandom ["04","burned","02","03"];
-				[_x, [_tip,200]] remoteExec ["say3d"];
-
-			} forEach (_nearflamer - [_flamer]);
-
-			if ((_flamer distance _tgt_flamer < 15) && !(_flamer getVariable "atk")) then
-			{
-				_flamer setVariable ["atk",true];
-				[_flamer, _tgt_flamer, _damage_flamer] spawn fnc_flamerAnomaly_attack_flamer;
-
-				sleep 0.5;
-
-				[_tgt_flamer] remoteExec ["f_fnc_fxAttackFlamerAnomaly"];
-
-				[_flamer] remoteExec ["f_fnc_fxJumpFlamerAnomaly"];
-				[_flamer, _tgt_flamer, _cap_flamer] call fnc_flamerAnomaly_jump_flamer;
-
-				waitUntil {sleep 0.1; !(_flamer getVariable ["flamerState", ""] isEqualTo "jumping")};
-
-			};
-
-			sleep 1;
-
-			_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",7];
-
-			_didHurt = false;
-			{
-				[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
-				_tip = selectrandom ["04","burned","02","03"];
-				[_x, [_tip,200]] remoteExec ["say3d"];
-				_didHurt = true;
-
-			} forEach (_nearflamer - [_flamer]);
-
-			if (_didHurt) then
-			{
-				[_flamer] remoteExec ["f_fnc_fxJumpFlamerAnomaly"];
-				[_flamer, _tgt_flamer, _cap_flamer] call fnc_flamerAnomaly_jump_flamer;
-
-				waitUntil {sleep 0.1; !(_flamer getVariable ["flamerState", ""] isEqualTo "jumping")};
-
-			};
-
-
-			if (IS_INCAPACITATED(_tgt_flamer) or {_tgt_flamer distance _poz_orig_sc > _teritoriu}) then
-			{
-				_list_unit_range_flamer = [_flamer, _teritoriu] call fnc_flamerAnomaly_find_target_flamer;
-
-				if !(count _list_unit_range_flamer isEqualTo 0) then
+				if (IS_INCAPACITATED(_tgt_flamer) or {_tgt_flamer distance _poz_orig_sc > _teritoriu}) then
 				{
-					_tgt_flamer = selectRandom _list_unit_range_flamer
-				}
-				else
-				{
-					_tgt_flamer = nil
-				}
+					_list_unit_range_flamer = [_flamer, _teritoriu] call fnc_flamerAnomaly_find_target_flamer;
+
+					if !(count _list_unit_range_flamer isEqualTo 0) then
+					{
+						_tgt_flamer = selectRandom _list_unit_range_flamer
+					}
+					else
+					{
+						_tgt_flamer = nil
+					}
+
+				};
 
 			};
 
 		};
 
+		_flamer setVariable ["flamerState", "hiding", true];
+		_flamer call fnc_flamerAnomaly_hide_flamer;
+
+		sleep 5;
+
+		_flamer setPos (getPos _origin_flamer);
+		_flamer setVariable ["flamerState", "waiting", true];
+
+		_tgt_flamer = nil;
+		_list_unit_range_flamer = [];
+
+		sleep 5;
+
 	};
 
-	_flamer setVariable ["flamerState", "hiding", true];
-	_flamer call fnc_flamerAnomaly_hide_flamer;
+	detach _cap_flamer;
+	deleteVehicle _cap_flamer;
 
 	sleep 5;
 
-	_flamer setPos (getPos _origin_flamer);
-	_flamer setVariable ["flamerState", "waiting", true];
-
-	_tgt_flamer = nil;
-	_list_unit_range_flamer = [];
-
-	sleep 5;
+	deleteVehicle _origin_flamer;
+	deleteVehicle _flamer;
 
 };
 
-detach _cap_flamer;
-deleteVehicle _cap_flamer;
 
-sleep 5;
-deleteVehicle _flamer;
+_origin_flamer

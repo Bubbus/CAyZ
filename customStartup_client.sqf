@@ -1,7 +1,9 @@
+
 _createBurper =
 {
-	_anomaly = [ASLToAGL (_this select 0), false] call f_fnc_createBurperAnomaly;
-	[_anomaly] call f_fnc_addObjectToAllZeuses;
+	params ["_pos"];
+
+	[_pos] remoteExec ["fnc_zen_createBurper", 2];
 };
 
 ["Anomalies", "Burper", _createBurper] call zen_custom_modules_fnc_register;
@@ -9,24 +11,79 @@ _createBurper =
 
 _createFartySmall =
 {
-	_anomaly = [ASLToAGL (_this select 0), "G_AirPurifyingRespirator_02_sand_F", true, 10, true, true, 5] spawn f_fnc_createFartyAnomaly;
-	[_anomaly] call f_fnc_addObjectToAllZeuses;
+	params ["_pos"];
+
+	[_pos, 10, 5] remoteExec ["fnc_zen_createFarty", 2];
 };
 
 ["Anomalies", "Farty (20m)", _createFartySmall] call zen_custom_modules_fnc_register;
 
+
 _createFartyNormal =
 {
-	_anomaly = [ASLToAGL (_this select 0), "G_AirPurifyingRespirator_02_sand_F", true, 25, true, true, 10] spawn f_fnc_createFartyAnomaly;
-	[_anomaly] call f_fnc_addObjectToAllZeuses;
+	params ["_pos"];
+
+	[_pos, 25, 10] remoteExec ["fnc_zen_createFarty", 2];
 };
 
 ["Anomalies", "Farty (50m)", _createFartyNormal] call zen_custom_modules_fnc_register;
 
+
 _createFartyHuge =
 {
-	_anomaly = [ASLToAGL (_this select 0), "G_AirPurifyingRespirator_02_sand_F", true, 37.5, true, true, 20] spawn f_fnc_createFartyAnomaly;
-	[_anomaly] call f_fnc_addObjectToAllZeuses;
+	params ["_pos"];
+
+	[_pos, 37.5, 20] remoteExec ["fnc_zen_createFarty", 2];
 };
 
 ["Anomalies", "Farty (75m)", _createFartyHuge] call zen_custom_modules_fnc_register;
+
+
+_createFlamer50 =
+{
+	params ["_pos"];
+
+	[_pos, 50] remoteExec ["fnc_zen_createFlamer", 2];
+};
+
+["Anomalies", "Flamer (100m)", _createFlamer50] call zen_custom_modules_fnc_register;
+
+
+_createFlamer75 =
+{
+	params ["_pos"];
+
+	[_pos, 75] remoteExec ["fnc_zen_createFlamer", 2];
+};
+
+["Anomalies", "Flamer (150m)", _createFlamer75] call zen_custom_modules_fnc_register;
+
+
+_createFlamer100 =
+{
+	params ["_pos"];
+
+	[_pos, 100] remoteExec ["fnc_zen_createFlamer", 2];
+};
+
+["Anomalies", "Flamer (200m)", _createFlamer100] call zen_custom_modules_fnc_register;
+
+
+_createFlamer150 =
+{
+	params ["_pos"];
+
+	[_pos, 150] remoteExec ["fnc_zen_createFlamer", 2];
+};
+
+["Anomalies", "Flamer (300m)", _createFlamer150] call zen_custom_modules_fnc_register;
+
+
+_createFlamer200 =
+{
+	params ["_pos"];
+
+	[_pos, 200] remoteExec ["fnc_zen_createFlamer", 2];
+};
+
+["Anomalies", "Flamer (400m)", _createFlamer200] call zen_custom_modules_fnc_register;

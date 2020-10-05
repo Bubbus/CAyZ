@@ -4,7 +4,7 @@ setTimeMultiplier 0;
 {
 	// this segment thanks to https://forums.bohemia.net/forums/topic/162594-i-am-one-type-of-lights-classname-short-of-success-help-p/?tab=comments#comment-2555563
 
-	_types = 
+	_types =
 	[
 		"Lamps_Base_F",
 		"Land_Jbad_Lamp_small",
@@ -49,7 +49,7 @@ setTimeMultiplier 0;
 		"Land_fs_sign_F",
 		"Land_A_GeneralStore_01"
 	];
-	
+
 	_onoff = 0.95;
 
 
@@ -57,15 +57,44 @@ setTimeMultiplier 0;
 	{
 		// lightsmarker is a marker I placed. 1000 is the distance around the marker
 		_lamps = getMarkerPos "lightsmarker" nearObjects [_types select _i, 1500];
-	   
+
 		sleep 0.1;
-	   
+
 		{
 			_x setDamage _onoff;
 			sleep 0.01;
-			
+
 		} forEach _lamps;
-	   
+
 	};
-	
+
+};
+
+
+
+
+fnc_zen_createBurper =
+{
+	params ["_pos"];
+
+	_anomaly = [_pos, false] call f_fnc_createBurperAnomaly;
+	[_anomaly] call f_fnc_addObjectsToAllZeuses;
+};
+
+
+fnc_zen_createFarty =
+{
+	params ["_pos", "_radius", "_puddles"];
+
+	_anomalyParts = [_pos, "G_AirPurifyingRespirator_02_sand_F", true, _radius, true, true, _puddles] call f_fnc_createFartyAnomaly;
+	_anomalyParts call f_fnc_addObjectsToAllZeuses;
+};
+
+
+fnc_zen_createFlamer =
+{
+	params ["_pos", "_radius"];
+
+	_anomaly = [_pos, _radius, 0.1, 50] call f_fnc_createFlamerAnomaly;
+	[_anomaly] call f_fnc_addObjectsToAllZeuses;
 };

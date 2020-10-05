@@ -14,7 +14,7 @@ fnc_create_puddle =
 	_obj_puddle setDir (random 360);
 	_obj_puddle setVectorUp surfaceNormal position _obj_puddle;
 
-	[_obj_puddle] remoteExec ["f_fnc_createToxicPuddle", 0, true];
+	_obj_puddle
 
 };
 
@@ -22,7 +22,7 @@ fnc_create_puddle =
 
 
 // AI avoidance
-fnc_avoid_fart =
+/* fnc_avoid_fart =
 {
 	private ["_danger_close","_op_dir","_chased_units","_fct","_reldir","_avoid_poz","_fct_move"];
 
@@ -39,12 +39,12 @@ fnc_avoid_fart =
 
 	} foreach _chased_units;
 
-};
+}; */
 
 
 
 
-fnc_puddle_trail =
+/* fnc_puddle_trail =
 {
 	private ["_obj_tox","_toxic_pos","_prob_create"];
 
@@ -66,12 +66,12 @@ fnc_puddle_trail =
 		deleteVehicle _obj_tox;
 	};
 
-};
+}; */
 
 
 
 
-fnc_dir_speed =
+/* fnc_dir_speed =
 {
 	private ["_fart_move","_object_to_move","_dir_move","_press_implicit_x","_press_implicit_y","_tolerance","_multiplier"];
 
@@ -115,7 +115,7 @@ fnc_dir_speed =
 
 	[_object_to_move,[_fart_move,200]] remoteExec ["say3d"];
 
-};
+}; */
 
 
 
@@ -136,17 +136,32 @@ obj_prot_toxic = _toxic_prot_mask;
 publicVariable "obj_prot_toxic";
 
 _farty_loc = "Land_HelipadEmpty_F" createVehicle _location_pos;
-sleep 1;
+
+_puddles = [];
 
 if (_no_puddles > 0) then
 {
 	for "_tt" from 1 to _no_puddles step 1 do
 	{
-		[_location_pos] call fnc_create_puddle;
-		sleep 1;
+		_puddle = [_location_pos] call fnc_create_puddle;
+		_puddles pushBack _puddle;
 	}
 
 };
+
+
+_puddles spawn
+{
+	sleep 1;
+
+	{
+		sleep 0.5;
+	    [_x] remoteExec ["f_fnc_createToxicPuddle", 0, true];
+
+	} forEach _this;
+
+};
+
 
 [_location_pos,_radius_toxic,_damage_toxic,_anomalyVSfield,_farty_loc] remoteExec ["f_fnc_fxFieldFartyAnomaly",0,true];
 
@@ -402,4 +417,4 @@ if (_anomalyVSfield) then
 //*/
 };
 
-_farty_loc
+([_farty_loc] + _puddles)

@@ -18,6 +18,6 @@ class miscShared
 	class giveUnitGodmode{};
     class applyInsignia{};
     class formatTimeDuration{};
-    class addObjectToAllZeuses{};
+    class addObjectsToAllZeuses{};
     class woundUnitRandomly{};
 };

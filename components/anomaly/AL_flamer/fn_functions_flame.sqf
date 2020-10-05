@@ -107,7 +107,7 @@ fnc_flamerAnomaly_show_flamer =
 	//[_flamer,_damage_flamer] remoteExec ["f_fnc_fxActorFlamerAnomaly",0];
 
 	_flamer enableSimulationGlobal true;
-	_flamer hideObjectGlobal false;
+	//_flamer hideObjectGlobal false;
 	{
 		_flamer reveal _x
 
