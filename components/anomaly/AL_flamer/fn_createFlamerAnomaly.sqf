@@ -159,7 +159,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 			if !((isNil '_result') or {isNull _result}) exitWith { _tgt_flamer = _result; true };
 
 			_players = allPlayers select {!(_x getVariable ["f_var_isZeus", false])};
-			_distances = allPlayers apply {_x distance _poz_orig_sc};
+			_distances = (allPlayers apply {_x distance _poz_orig_sc}) + [1000];
 			_closest = selectMin _distances;
 
 			sleep ((_closest / 100) min 10) max 2;
