@@ -98,3 +98,12 @@ fnc_zen_createFlamer =
 	_anomaly = [_pos, _radius, 0.1, 50] call f_fnc_createFlamerAnomaly;
 	[_anomaly] call f_fnc_addObjectsToAllZeuses;
 };
+
+
+fnc_zen_createSparky =
+{
+	params ["_pos", "_radius"];
+
+	_anomaly = [_pos, _radius, true] call f_fnc_createSparkyAnomaly;
+	[_anomaly] call f_fnc_addObjectsToAllZeuses;
+};

@@ -4,4 +4,6 @@ class AL_spark
     class createSparkyAnomaly{};
     class posGeneratorSparkyAnomaly{};
     class moveSparkyAnomaly{};
+    class avoidSparkyAnomaly{};
+    class fxAttackSparkyAnomaly{};
 };

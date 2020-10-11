@@ -87,3 +87,43 @@ _createFlamer200 =
 };
 
 ["Anomalies", "Flamer (400m)", _createFlamer200] call zen_custom_modules_fnc_register;
+
+
+_createSparky10 =
+{
+	params ["_pos"];
+
+	[_pos, 10] remoteExec ["fnc_zen_createSparky", 2];
+};
+
+["Anomalies", "Sparky (20m)", _createSparky10] call zen_custom_modules_fnc_register;
+
+
+_createSparky20 =
+{
+	params ["_pos"];
+
+	[_pos, 20] remoteExec ["fnc_zen_createSparky", 2];
+};
+
+["Anomalies", "Sparky (40m)", _createSparky20] call zen_custom_modules_fnc_register;
+
+
+_createSparky40 =
+{
+	params ["_pos"];
+
+	[_pos, 40] remoteExec ["fnc_zen_createSparky", 2];
+};
+
+["Anomalies", "Sparky (80m)", _createSparky40] call zen_custom_modules_fnc_register;
+
+
+_createSparky100 =
+{
+	params ["_pos"];
+
+	[_pos, 100] remoteExec ["fnc_zen_createSparky", 2];
+};
+
+["Anomalies", "Sparky (200m)", _createSparky100] call zen_custom_modules_fnc_register;
