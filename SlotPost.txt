@@ -12,15 +12,32 @@ Make sure your mods are updated in time, and feel free to contact the mods throu
 
 [Map of AO] PENDING
 
+&#x200B;
+
 **SITUATION**
 
-Bubbus, Lore it up
+Good news CA!  The pandemic is done north of the border, and just in time for Halloween!  Meat Up attendees flock to christen a new hill in the Mull of Kintyre - meat roasts, festivities occur and as night falls, sleep claims you all one by one.
+
+---
+
+It all changed when the bad weather came. Some took to the winds differently but most who breathed the tangy, metallic air when it washed over Kintyre from the east were maddened, left to prey upon those who were in shelter. The winds settled and lay heavy over the lowest land, leaving those in the hills to survey the new hordes.  Yet, the hordes were not as bad as those the wind merely whispered to.  
+
+A swift military response dealt with nearly all of the afflicted - the few remaining growing feral, swift and uncontrollable.  However, feuds emerged on how to deal with looters, the new landscape and the afflicted in their own ranks.  With higher command seemingly unreachable and tempers fraying uncharacteristically quickly, factions began to emerge.
+
+The winds brought with them more than a bitter taste - ships have run aground, aircraft have ceased to fly overhead and those who go north for help have yet to return.  Those who remain are learning, adapting and praying.
+
+---
+
+The Meat Up wakes at once as dawn rises, but something is amiss.  The fires have been dead for days, the meat is starting to spoil and *the beers are warm*.  As you start to address this terrible fate, you begin to realise how bad it is.  All the cars are dead, nobody's phones have signal.  The only lead is the camp leader's emergency radio which, as the hour strikes, begins to speak...
+
+&#x200B;
 
 **MISSION**
 
-* Procure, prepare, and consume a minimum of 10 Kg of meat per Attendee.
+* ~~Procure, prepare, and consume a minimum of 10 Kg of meat per Attendee.~~ (TEMPORARILY CANCELLED)
+* Find out what is going on.
 
-
+&#x200B;
 
 **SYSTEM NOTES**
 
@@ -28,9 +45,11 @@ Bubbus, Lore it up
 
 **Terrain:** Mull of Kintyre
 
-Respawn: ?????????? <-------------------------------------------------------- BUBBUS
+Respawn: Special conditions, semi-frequent.
 
-Radios: Standard.
+Radios: for leader.
+
+&#x200B;
 
 Slotting:
 
@@ -42,24 +61,7 @@ Use this in your slotting comment:
 
 *SLOT DESCRIPTIONS*
 
-* CO - Commander - Has command over the entire mission, responsible for creating a plan and directing units in game.
-* XO - Executive Officer - Assists CO in leading platoon in combat.
-* MED - Medic - Provides medical assistance to wounded comrades.
-* ENG - Engineer - Carries a toolkit to help repair damaged vehicles. Also responsible for rearming vehicles.
-* CLS - Combat Lifesaver - Provides immediate medical assistance to wounded comrades & assists Medics in restoring them to full fitness. Does not carry PAK, Surgical Kit, or Medic Bag.
-* SL - Squad leader - Leads a squad, reports to CO
-* FTL - Fireteam Leader - Leads a fireteam - reports to SL or CO
-* AR - Automatic Rifleman - Provides suppression fire for the squad with his support weapon.
-* AAR - Assistant Automatic Rifleman - Carries extra ammo for the AR, and guides them onto targets.
-* GREN - Grenadier - I didn't find a post to copy this from. You get a lot of grenades + a rifle-mounted grenade launcher. Someone probably already took this slot.
-* DM - Designated Marksman - I didn't find a post to copy this one from either. Someone **definitely** already took this.
-* LAT - Light Anti Tank - Carries a disposable AT weapon (RPG-26, AT4, M72, etc.)
-
 *This list is not guaranteed to be up to date! Do a quick look through the comments to make sure your slot hasn't already been claimed.*
-
-BLUFOR##
-
-&#x200B;
 
 |Callsign/Role|IGN|Equipment|
 |:-|:-|:-|
