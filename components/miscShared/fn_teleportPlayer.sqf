@@ -30,7 +30,7 @@ if !(_object isKindOf "AllVehicles") exitWith
 };
 
 
-if (_object isKindOf "Man") exitWith
+if (_object isKindOf "CAManBase") exitWith
 {
     _vehicle = objectParent _object;
     _success = false;

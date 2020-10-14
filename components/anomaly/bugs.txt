@@ -1,0 +1,4 @@
+Burper ball inits per client as non-local vehicle.
+Burper doesn't move with base ent in MP
+Burper doesn't delete player corpse when it blasts them.
+Flamer still dies from jumping.
