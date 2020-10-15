@@ -109,12 +109,13 @@ _flamerDamageHandler =
 	_curHp = _unit getVariable ["flamerHp", 0];
 	_curHp = _curHp - _damage;
 
-	if (!(_instigator isEqualTo objNull)) then
+	if !((_instigator isEqualTo objNull) or {_instigator isEqualTo _unit}) then
 	{
 		_unit setVariable ["flamerHp", _curHp, true];
-	};
 
-	if (_curHp <= 0) then {_unit setDamage 1};
+		if (_curHp <= 0) then {_unit setDamage 1};
+
+	};
 
 };
 

@@ -13,15 +13,26 @@ while {alive _object_burp_damage} do
 
 		sleep 0.5 + (random 0.5);
 
-		_x setDamage 1;
-		_x hideObjectGlobal true;
-		deletevehicle _x;
+		_pos = getPosATL _x;
 
-		_oase = createVehicle ["Land_HumanSkeleton_F", [getposATL _x select 0,getposATL _x select 1,1.5], [], 0, "CAN_COLLIDE"];
+		if (isPlayer _x) then
+		{
+			_x setPos [0,0,0];
+			_x spawn {sleep 1; _this setDamage 1; deleteVehicle _this;}
+		}
+		else
+		{
+			_x setDamage 1;
+			_x hideObjectGlobal true;
+			deleteVehicle _x;
+		};
+
+		_oase = createVehicle ["Land_HumanSkeleton_F", [_pos#0, _pos#1, 1.5], [], 0, "CAN_COLLIDE"];
 		[_oase] remoteExec ["f_fnc_fxSplashBurperAnomaly",0];
-
-		_balta_sange = createVehicle ["BloodSplatter_01_Medium_New_F", [getposATL _x select 0,getposATL _x select 1,0], [], 0, "CAN_COLLIDE"];
 		_oase setVectorUp [0,-1,1];
+
+		_balta_sange = createVehicle ["BloodSplatter_01_Medium_New_F", [_pos#0, _pos#1, 0], [], 0, "CAN_COLLIDE"];
+		_balta_sange setVectorUp surfaceNormal position _balta_sange;
 
 		[_object_burp_damage,["blood_splash",100]] remoteExec ["say3d",0];
 

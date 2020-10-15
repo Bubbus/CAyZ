@@ -162,7 +162,7 @@ while {alive _work_obj} do
 {
 	waitUntil {sleep 2; (player distance _work_obj) < var_burperAnomaly_visibleDistance};
 
-	_burper_obj_sec = createVehicle ["Sign_Sphere25cm_F", [getposATL _work_obj select 0,getposATL _work_obj select 1,0], [], 0, "CAN_COLLIDE"];
+	_burper_obj_sec = "Sign_Sphere25cm_F" createVehicleLocal [getposATL _work_obj select 0, getposATL _work_obj select 1, 0];
 	_burper_obj_sec setObjectMaterial [0,"A3\Structures_F\Data\Windows\window_set.rvmat"];
 	_burper_obj_sec setObjectTextureglobal [0, "res\01_burper.jpg"];
 

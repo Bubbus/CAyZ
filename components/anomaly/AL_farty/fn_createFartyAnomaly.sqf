@@ -133,7 +133,6 @@ _trail_on		 = _this select 5; // while moving the anomaly will leave a trail of 
 _no_puddles		 = _this select 6;
 
 obj_prot_toxic = _toxic_prot_mask;
-publicVariable "obj_prot_toxic";
 
 _farty_loc = "Land_HelipadEmpty_F" createVehicle _location_pos;
 
