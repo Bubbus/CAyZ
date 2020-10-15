@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2314;
+		nextID=2319;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={16253.951,287.04324,17241.412};
-		dir[]={0.087103225,-0.4096984,0.90805894};
-		up[]={0.039119821,0.91221803,0.4078294};
-		aside[]={0.99543446,-9.0425601e-008,-0.095484391};
+		pos[]={13518.651,21.57296,18823.496};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -101,7 +101,6 @@ addons[]=
 	"A3_Props_F_Enoch_Industrial_Electric",
 	"A3_Structures_F_Enoch_VR_Helpers",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
-	"Cre8ive_Radiation",
 	"A3_Weapons_F_Rifles_MX",
 	"A3_Weapons_F_Acc",
 	"ace_laserpointer",
@@ -116,7 +115,8 @@ addons[]=
 	"ace_medical_engine",
 	"A3_Characters_F_Mark",
 	"ace_attach",
-	"ace_chemlights"
+	"ace_chemlights",
+	"Cre8ive_Radiation"
 };
 class AddonsMetaData
 {
@@ -461,79 +461,79 @@ class AddonsMetaData
 		};
 		class Item52
 		{
-			className="Cre8ive_Radiation";
-			name="Cre8ive - Radiation Hazards";
-			author="Cre8or";
-		};
-		class Item53
-		{
 			className="ace_laserpointer";
 			name="ACE3 - Laser Pointer";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item54
+		class Item53
 		{
 			className="ace_smallarms";
 			name="ACE3 - Small Arms";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item55
+		class Item54
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item56
+		class Item55
 		{
 			className="acre_main";
 			name="ACRE2 - Main";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item57
+		class Item56
 		{
 			className="UK3CB_BAF_Equipment_Glasses";
 			name="3CB BAF Equipment - Glasses";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item58
+		class Item57
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item59
+		class Item58
 		{
 			className="ace_medical_engine";
 			name="ACE3 - Medical Engine";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item60
+		class Item59
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item60
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item62
+		class Item61
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item62
+		{
+			className="Cre8ive_Radiation";
+			name="Cre8ive - Radiation Hazards";
+			author="Cre8or";
 		};
 	};
 };
@@ -5175,7 +5175,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=654;
+		items=647;
 		class Item0
 		{
 			dataType="Logic";
@@ -25436,346 +25436,6 @@ class Mission
 		};
 		class Item643
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={15169.809,48.841381,18791.922};
-				angles[]={6.2465363,0,0.13418877};
-			};
-			id=2300;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item644
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={16061.089,94.11924,19007.09};
-			};
-			id=2301;
-			type="Cre8ive_Module_BackgroundRadiation";
-			atlOffset=-7.6293945e-006;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="BR_Radioactivity";
-					expression="_this setVariable ['Cre8ive_BR_Strength',_value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0.00039999999;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item645
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={15999.587,118.84904,18639.887};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2304;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item646
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={16433.494,155.42046,18467.477};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2305;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item647
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={17016.057,91.801125,18383.516};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2306;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item648
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={17570.082,93.3041,18575.703};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2307;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item649
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={18280.059,70.95076,18826.428};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2308;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item650
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={19111.672,-7.0100002,18982.82};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2309;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item651
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={14387.02,24.555593,18887.992};
-				angles[]={0.039979152,0,0.015002378};
-			};
-			id=2310;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item652
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={13518.835,10.115327,18838.178};
-				angles[]={6.1604714,0,0.018331951};
-			};
-			id=2311;
-			type="Cre8ive_Module_RadiationNoise";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="RadiationNoise";
-					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=50;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item653
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -25931,6 +25591,150 @@ class Mission
 			};
 			id=2312;
 			atlOffset=-0.00018310547;
+		};
+		class Item644
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15565.846,157.51765,28282.484};
+				angles[]={6.1609073,0,6.2460275};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2314;
+			type="Cre8ive_RadiationNode";
+			atlOffset=1.5258789e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="RN_Strength";
+					expression="_this setVariable ['Cre8ive_RN_Strength',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=180;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="RN_RadiusOutside";
+					expression="_this setVariable ['Cre8ive_RN_RadiusOutside',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10000;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="RN_RadiusInside";
+					expression="_this setVariable ['Cre8ive_RN_RadiusInside',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=8000;
+						};
+					};
+				};
+				nAttributes=3;
+			};
+		};
+		class Item645
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16562.725,113.15907,28256.848};
+			};
+			id=2317;
+			type="Cre8ive_Module_BackgroundRadiation";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="BR_Radioactivity";
+					expression="_this setVariable ['Cre8ive_BR_Strength',_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.0040000002;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item646
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={14563.485,153.97729,28329.99};
+			};
+			id=2318;
+			type="Cre8ive_Module_RadiationNoise";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="RadiationNoise";
+					expression="_this setVariable ['Cre8ive_RadiationNoise', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=25;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
