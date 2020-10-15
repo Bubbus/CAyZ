@@ -20,4 +20,8 @@ class miscShared
     class formatTimeDuration{};
     class addObjectsToAllZeuses{};
     class woundUnitRandomly{};
+    class onSubstationEnabled{};
+    class setLampsOn{};
+    class substationEffects{};
+    class activateGigObjective{};
 };

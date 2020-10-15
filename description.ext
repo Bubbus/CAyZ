@@ -849,6 +849,97 @@ class CfgSounds
 
 	// END: Sparky
 
+
+
+	// START: Fireworks
+
+	class firework1
+	{
+		name = "firework1";
+		sound[] = {"\sounds\firework1.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class firework2
+	{
+		name = "firework2";
+		sound[] = {"\sounds\firework2.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class firework3
+	{
+		name = "firework3";
+		sound[] = {"\sounds\firework3.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class fluier1
+	{
+		name = "fluier1";
+		sound[] = {"\sounds\fluier1.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier2
+	{
+		name = "fluier2";
+		sound[] = {"\sounds\fluier2.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier3
+	{
+		name = "fluier3";
+		sound[] = {"\sounds\fluier3.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier4
+	{
+		name = "fluier4";
+		sound[] = {"\sounds\fluier4.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier5
+	{
+		name = "fluier5";
+		sound[] = {"\sounds\fluier5.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier6
+	{
+		name = "fluier6";
+		sound[] = {"\sounds\fluier6.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier7
+	{
+		name = "fluier7";
+		sound[] = {"\sounds\fluier7.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_1
+	{
+		name = "eko_fir_1";
+		sound[] = {"\sounds\eko_fir_1.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_2
+	{
+		name = "eko_fir_2";
+		sound[] = {"\sounds\eko_fir_2.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_3
+	{
+		name = "eko_fir_3";
+		sound[] = {"\sounds\eko_fir_3.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_4
+	{
+		name = "eko_fir_4";
+		sound[] = {"\sounds\eko_fir_4.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: Fireworks
+
 };
 
 
