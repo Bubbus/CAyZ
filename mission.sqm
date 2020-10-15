@@ -8,18 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2289;
+		nextID=2300;
 	};
 	class MarkerIDProvider
 	{
 		nextID=6;
 	};
+	class LayerIndexProvider
+	{
+		nextID=1;
+	};
 	class Camera
 	{
-		pos[]={15390.76,170.92293,17683.258};
-		dir[]={0.38228625,-0.47392344,-0.7933507};
-		up[]={0.20575315,0.88052315,-0.42699671};
-		aside[]={-0.90093577,-4.498288e-007,-0.4341253};
+		pos[]={14744.588,93.408432,16233.703};
+		dir[]={-0.019411087,-0.67110252,0.74114388};
+		up[]={-0.017570216,0.7413522,0.67088783};
+		aside[]={0.99968553,-2.2534368e-007,0.026182493};
 	};
 };
 binarizationWanted=0;
@@ -94,13 +98,17 @@ addons[]=
 	"UK3CB_Factions_Vehicles_S1203",
 	"A3_Structures_F_Orange_Humanitarian_Camps",
 	"A3_Soft_F_Enoch_Truck_01",
-	"UK3CB_BAF_Vehicles_Merlin"
+	"UK3CB_BAF_Vehicles_Merlin",
+	"A3_Structures_F_Items_Electronics",
+	"A3_Props_F_Enoch_Industrial_Electric",
+	"A3_Structures_F_Enoch_VR_Helpers",
+	"A3_Props_F_Orange_Humanitarian_Supplies"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=53;
+		items=54;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -443,6 +451,13 @@ class AddonsMetaData
 			name="3CB BAF Vehicles - Merlin";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item53
+		{
+			className="A3_Structures_F_Enoch";
+			name="Arma 3 Contact Platform - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -5082,7 +5097,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=643;
+		items=645;
 		class Item0
 		{
 			dataType="Logic";
@@ -25190,6 +25205,190 @@ class Mission
 			{
 			};
 			id=2275;
+		};
+		class Item643
+		{
+			dataType="Layer";
+			name="merge";
+			class Entities
+			{
+				items=9;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14727.083,56.908073,16291.909};
+						angles[]={3.1416276,3.1415751,4.7190909};
+					};
+					side="Empty";
+					class Attributes
+					{
+						createAsSimpleObject=1;
+					};
+					id=2296;
+					type="Land_FloodLight_F";
+					atlOffset=2.6413612;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14727.093,55.069313,16291.808};
+						angles[]={0,4.712389,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+						init="call{if (hasInterface and {!(missionNamespace getVariable ['substationActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Activate substation"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(!(missionNamespace getVariable ['substationActive', false])) and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onSubstationEnabled},  " \n "{},  " \n "[],  " \n "3,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
+						name="substation_panel";
+					};
+					id=2295;
+					type="Land_TransferSwitch_01_F";
+					atlOffset=0.98546982;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14727.136,56.765804,16291.929};
+						angles[]={1.5707964,6.1964946,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=2297;
+					type="Reflector_Cone_01_narrow_white_F";
+					atlOffset=2.6580658;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15403.848,4.8639793,17529.1};
+						angles[]={6.248199,0,0.036650803};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_1";
+						createAsSimpleObject=1;
+					};
+					id=2294;
+					type="Land_FoodContainer_01_White_F";
+					atlOffset=-0.00043392181;
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15460.881,5.1622939,17592.717};
+						angles[]={0.034986377,0,6.2648535};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_2";
+						createAsSimpleObject=1;
+					};
+					id=2292;
+					type="Land_FoodContainer_01_White_F";
+					atlOffset=-0.0010914803;
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15597.179,3.2193491,17484.926};
+						angles[]={6.2815661,0,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_3";
+						createAsSimpleObject=1;
+					};
+					id=2291;
+					type="Land_FoodContainer_01_White_F";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15588.993,3.1342797,17464.416};
+						angles[]={6.2698536,0,0.0016558425};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_4";
+						createAsSimpleObject=1;
+					};
+					id=2290;
+					type="Land_FoodContainer_01_White_F";
+					atlOffset=-0.00410676;
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15553.878,4.1777387,17357.238};
+						angles[]={6.2815294,0,6.2731848};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_5";
+						createAsSimpleObject=1;
+					};
+					id=2289;
+					type="Land_FoodContainer_01_White_F";
+					atlOffset=-2.1696091e-005;
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15386.64,5.4934011,17583.623};
+						angles[]={0.036650803,0,0.011667843};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fireworker_6";
+						createAsSimpleObject=1;
+					};
+					id=2293;
+					type="Land_FoodContainer_01_White_F";
+					atlOffset=-0.0025081635;
+				};
+			};
+			id=2298;
+			atlOffset=1.3697965;
+		};
+		class Item644
+		{
+			dataType="Marker";
+			position[]={14749.082,61.591999,16280.354};
+			name="substation_marker";
+			type="Empty";
+			id=2299;
+			atlOffset=7.0001259;
 		};
 	};
 	class Connections
