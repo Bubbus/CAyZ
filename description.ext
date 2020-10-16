@@ -940,6 +940,97 @@ class CfgSounds
 
 	// END: Fireworks
 
+
+
+	// START: MEGA Sparky
+
+	class magnetic_pulse_mega
+	{
+		name = "magnetic_pulse_mega";
+		sound[] = {"\sounds\magnetic_pulse.ogg", db+40, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_1_mega
+	{
+		name = "sparks_1_mega";
+		sound[] = {"\sounds\sparks_1.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_2_mega
+	{
+		name = "sparks_2_mega";
+		sound[] = {"\sounds\sparks_2.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_3_mega
+	{
+		name = "sparks_3_mega";
+		sound[] = {"\sounds\sparks_3.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_4_mega
+	{
+		name = "sparks_4_mega";
+		sound[] = {"\sounds\sparks_4.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_5_mega
+	{
+		name = "sparks_5_mega";
+		sound[] = {"\sounds\sparks_5.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class after_01_mega
+	{
+		name = "after_01_mega";
+		sound[] = {"\sounds\after_01.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class after_02_mega
+	{
+		name = "after_02_mega";
+		sound[] = {"\sounds\after_02.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 01_atak_mega
+	{
+		name = "01_atak_mega";
+		sound[] = {"\sounds\01_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 02_atak_mega
+	{
+		name = "02_atak_mega";
+		sound[] = {"\sounds\02_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 03_atak_mega
+	{
+		name = "03_atak_mega";
+		sound[] = {"\sounds\03_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 04_atak_mega
+	{
+		name = "04_atak_mega";
+		sound[] = {"\sounds\04_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 05_atak_mega
+	{
+		name = "05_atak_mega";
+		sound[] = {"\sounds\05_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 06_atak_mega
+	{
+		name = "06_atak_mega";
+		sound[] = {"\sounds\06_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: MEGA Sparky
+
 };
 
 

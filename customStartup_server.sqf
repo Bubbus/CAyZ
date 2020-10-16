@@ -42,3 +42,12 @@ fnc_zen_createSparky =
 	_anomaly = [_pos, _radius, true] call f_fnc_createSparkyAnomaly;
 	[_anomaly] call f_fnc_addObjectsToAllZeuses;
 };
+
+
+fnc_zen_createMegaSparky =
+{
+	params ["_pos", "_radius"];
+
+	_anomaly = [_pos, _radius, true] call f_fnc_createMegaSparkyAnomaly;
+	[_anomaly] call f_fnc_addObjectsToAllZeuses;
+};

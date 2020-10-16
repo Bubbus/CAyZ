@@ -1,7 +1,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_baseObj", ["_radius", 50], ["_height", [0.5, 3, 6]], ["_timePerNode", 20]];
+params ["_baseObj", ["_radius", 50], ["_height", [0.5, 3, 6]], ["_timePerNode", 10]];
 
 _baseObj setVariable ["timePerNode", _timePerNode, true];
 
@@ -26,8 +26,9 @@ while {alive _baseObj} do
 
         _basePos = (getPos _baseObj);
 
+        _pointRadius = _radius * (sqrt random 1);
         _pointAngle = random 360;
-        _pointPos = [_radius * cos _pointAngle, _radius * sin _pointAngle, random _height];
+        _pointPos = [_pointRadius * cos _pointAngle, _pointRadius * sin _pointAngle, random _height];
 
         _pos = _basePos vectorAdd _pointPos;
 
