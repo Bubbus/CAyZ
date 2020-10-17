@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2371;
+		nextID=2403;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=5;
 	};
 	class Camera
 	{
-		pos[]={16851.271,323.87228,16950.344};
-		dir[]={-0.97664946,-0.18660259,0.10653493};
-		up[]={-0.18550694,0.98243332,0.020235356};
-		aside[]={0.10844012,-3.244495e-007,0.99410892};
+		pos[]={15516.536,52.598377,17484.498};
+		dir[]={-0.70030111,-0.41596517,0.58019197};
+		up[]={-0.32033786,0.9093613,0.26539719};
+		aside[]={0.63800776,-8.7823719e-007,0.77008247};
 	};
 };
 binarizationWanted=0;
@@ -114,13 +114,15 @@ addons[]=
 	"CUP_CAStructuresLand_Nav_Boathouse",
 	"A3_Structures_F_Dominants_Lighthouse",
 	"A3_Static_F_Destroyer_Boat_Rack_01",
-	"A3_Structures_F_Exp_Naval_Piers"
+	"A3_Structures_F_Exp_Naval_Piers",
+	"A3_Misc_F_Helpers",
+	"A3_Structures_F_Kart_Civ_SportsGrounds"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=62;
+		items=64;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -515,6 +517,20 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item62
+		{
+			className="A3_Misc_F";
+			name="Arma 3 - 3D Aids and Helpers";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item63
+		{
+			className="A3_Structures_F_Kart";
+			name="Arma 3 Karts - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -5158,7 +5174,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=670;
+		items=694;
 		class Item0
 		{
 			dataType="Logic";
@@ -12162,7 +12178,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15415.866,6.7834325,17563.77};
-				angles[]={0.0033296358,5.2115183,0.0049914722};
+				angles[]={0.0033335788,5.2115183,0.0049916417};
 			};
 			areaSize[]={20,0,20};
 			areaIsRectangle=1;
@@ -12868,18 +12884,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15431.071,8.0719929,17576.115};
-				angles[]={0,5.1741743,0};
+				position[]={15431.071,8.0715828,17576.115};
+				angles[]={0,5.1741681,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
+				name="sound_blaster_1";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1848;
 			type="Land_PortableGenerator_01_black_F";
+			atlOffset=1.2589993;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12992,19 +13009,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15413.588,8.1002398,17544.123};
-				angles[]={0,5.1741743,0};
+				position[]={15413.588,8.1004343,17544.123};
+				angles[]={0,5.1741681,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="sound_blaster_2";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1851;
 			type="Land_PortableGenerator_01_black_F";
-			atlOffset=0.017365932;
+			atlOffset=0.017560482;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16260,6 +16278,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];}";
 			};
 			id=1951;
 			type="Land_PortableLight_02_quad_black_F";
@@ -16300,6 +16319,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];}";
 			};
 			id=1953;
 			type="Land_PortableLight_02_quad_black_F";
@@ -16340,6 +16360,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];}";
 			};
 			id=1956;
 			type="Land_PortableLight_02_quad_black_F";
@@ -16758,102 +16779,113 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15401.026,13.654194,17549.779};
+				position[]={15401.026,13.654388,17549.779};
 				angles[]={0,5.7595868,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];}";
+				name="stagelamp_1";
 			};
 			id=1997;
 			type="Land_LampHalogen_F";
-			atlOffset=0.19079161;
+			atlOffset=0.00019407272;
 		};
 		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15402.06,13.654194,17549.303};
+				position[]={15402.06,13.654421,17549.303};
 				angles[]={0,4.4505897,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				name="stagelamp_6";
 			};
 			id=1998;
 			type="Land_LampHalogen_F";
-			atlOffset=0.040270329;
+			atlOffset=0.00022649765;
 		};
 		class Item459
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15402.705,13.654194,17550.268};
-				angles[]={0,2.8797936,0};
+				position[]={15402.705,13.654129,17550.268};
+				angles[]={0,2.8797932,0};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				name="stagelamp_5";
 			};
 			id=1999;
 			type="Land_LampHalogen_F";
-			atlOffset=0.33083868;
+			atlOffset=0.33077383;
 		};
 		class Item460
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15419.35,13.700684,17580.85};
+				position[]={15419.35,13.700943,17580.85};
 				angles[]={0,4.1887903,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				name="stagelamp_4";
 			};
 			id=2000;
 			type="Land_LampHalogen_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=0.00025987625;
 		};
 		class Item461
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15419.808,13.700684,17581.951};
-				angles[]={0,2.8797936,0};
+				position[]={15419.808,13.70046,17581.951};
+				angles[]={0,2.8797932,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				name="stagelamp_3";
 			};
 			id=2001;
 			type="Land_LampHalogen_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=0.20253992;
 		};
 		class Item462
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15418.767,13.700684,17582.594};
-				angles[]={0,1.5707965,0};
+				position[]={15418.767,13.70076,17582.594};
+				angles[]={0,1.5707964,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
+				name="stagelamp_2";
 			};
 			id=2002;
 			type="Land_LampHalogen_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=7.6770782e-005;
 		};
 		class Item463
 		{
@@ -26642,7 +26674,7 @@ class Mission
 			};
 			id=2346;
 			type="Land_LightHouse_F";
-			atlOffset=-1.1920929e-007;
+			atlOffset=8.3446503e-007;
 		};
 		class Item663
 		{
@@ -26762,6 +26794,468 @@ class Mission
 			id=2369;
 			type="Land_PierWooden_01_16m_F";
 			atlOffset=-1.7184012;
+		};
+		class Item670
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15402.014,20.275734,17549.402};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				name="stagesparks_1";
+			};
+			id=2374;
+			type="UserTexture1m_F";
+			atlOffset=4.3407917;
+		};
+		class Item671
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15419.749,20.261402,17581.98};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				name="stagesparks_2";
+			};
+			id=2375;
+			type="UserTexture1m_F";
+			atlOffset=4.4348145;
+		};
+		class Item672
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15459.581,6.0310483,17558.662};
+				angles[]={0.0033296358,0.46828794,6.231565};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2379;
+			type="WaterSpill_01_Large_Foam_F";
+			atlOffset=2.3365021e-005;
+		};
+		class Item673
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15452.938,6.3396378,17556.295};
+				angles[]={6.276526,3.8894711,6.2398806};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2380;
+			type="WaterSpill_01_Large_Foam_F";
+			atlOffset=5.1021576e-005;
+		};
+		class Item674
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.557,6.9426336,17557.607};
+				angles[]={0,4.712389,6.2348919};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="gigPowerCabinet";
+			};
+			id=2381;
+			type="PowerGenerator_EP1";
+		};
+		class Item675
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15458.77,6.4857411,17558.984};
+				angles[]={-0,0.78539819,6.2348905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2382;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=-7.7724457e-005;
+		};
+		class Item676
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15459.487,6.4511352,17557.311};
+				angles[]={-0,4.7123895,6.2348905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2383;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=8.5830688e-006;
+		};
+		class Item677
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15459.49,6.4501719,17555.424};
+				angles[]={6.2815294,4.7123895,6.2348905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2384;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=0.00014686584;
+		};
+		class Item678
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15459.452,6.4485731,17553.416};
+				angles[]={6.2815294,4.7123895,6.2348905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2385;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=5.4359436e-005;
+		};
+		class Item679
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15457.101,6.5662379,17559.65};
+				angles[]={-0,0,6.2348905};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2386;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=-0.00022315979;
+		};
+		class Item680
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15453.91,6.6830101,17553.287};
+				angles[]={6.2731848,4.7123895,6.2398791};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2387;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=-3.4809113e-005;
+		};
+		class Item681
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15453.948,6.7014976,17555.295};
+				angles[]={6.2731848,4.7123895,6.2398791};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2388;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=2.0027161e-005;
+		};
+		class Item682
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15453.945,6.7164955,17557.182};
+				angles[]={6.276526,4.7123895,6.2398806};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2389;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=-1.335144e-005;
+		};
+		class Item683
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15457.945,6.0829387,17551.58};
+				angles[]={6.2731848,4.4505897,6.2432065};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2390;
+			type="WaterSpill_01_Large_Foam_F";
+			atlOffset=-2.8610229e-006;
+		};
+		class Item684
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15454.608,6.6893525,17558.824};
+				angles[]={-0,5.4977875,6.2332273};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2391;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=6.9141388e-005;
+		};
+		class Item685
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15458.653,6.4702187,17551.664};
+				angles[]={6.2731848,2.356195,6.2432065};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2392;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=0.0001578331;
+		};
+		class Item686
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.157,6.5617166,17550.838};
+				angles[]={6.2731848,3.1415927,6.2432065};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2393;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=7.3432922e-005;
+		};
+		class Item687
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15454.488,6.6399598,17551.504};
+				angles[]={6.2631865,3.926991,6.2498641};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=2394;
+			type="PlasticBarrier_03_orange_F";
+			atlOffset=1.0490417e-005;
+		};
+		class Item688
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.353,8.1670179,17554.373};
+				angles[]={0,3.6651924,4.712389};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=2395;
+			type="PowerCable_01_CurveLong_F";
+			atlOffset=1.9712701;
+		};
+		class Item689
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.452,6.716886,17556.711};
+				angles[]={3.1415927,3.1415927,4.7606821};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{if (hasInterface and {!(missionNamespace getVariable ['gigActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Insulate power short"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(!(missionNamespace getVariable ['gigActive', false])) and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onGigEnabled},  " \n "{},  " \n "[],  " \n "10,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
+			};
+			id=2396;
+			type="PowerCable_01_Corner_F";
+			atlOffset=0.51499987;
+		};
+		class Item690
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.363,9.2540445,17552.648};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				name="giglamp";
+			};
+			id=2397;
+			type="Land_LampStreet_small_F";
+			atlOffset=-4.7683716e-007;
+		};
+		class Item691
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15456.456,6.1481733,17552.645};
+				angles[]={6.2731848,5.2115183,6.2431998};
+			};
+			areaSize[]={2,0,2};
+			areaIsRectangle=1;
+			flags=1;
+			id=2398;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item692
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.481,7.2267065,17557.129};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				name="stagesparks_3";
+			};
+			id=2399;
+			type="UserTexture1m_F";
+			atlOffset=1.0500002;
+		};
+		class Item693
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.396,6.1781883,17555.406};
+				angles[]={6.2731848,0,6.2431998};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this spawn {if (isServer) then" \n "{" \n "    waitUntil {sleep 1; time > 20};" \n "    _anomaly = [getpos _this, 15, true] call f_fnc_createSparkyAnomaly;" \n "    [_anomaly] call f_fnc_addObjectsToAllZeuses;" \n "    deleteVehicle _this;" \n "}};}";
+			};
+			id=2401;
+			type="UserTexture1m_F";
 		};
 	};
 	class Connections

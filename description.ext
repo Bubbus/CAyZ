@@ -1031,6 +1031,55 @@ class CfgSounds
 
 	// END: MEGA Sparky
 
+
+
+	// START: electrical sparks
+
+	class spark1
+	{
+		name = "spark1";
+		sound[] = {"\sounds\spark1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark11
+	{
+		name = "spark11";
+		sound[] = {"\sounds\spark11.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark2
+	{
+		name = "spark2";
+		sound[] = {"\sounds\spark2.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark22
+	{
+		name = "spark22";
+		sound[] = {"\sounds\spark22.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark3
+	{
+		name = "spark3";
+		sound[] = {"\sounds\spark3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark4
+	{
+		name = "spark4";
+		sound[] = {"\sounds\spark4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark5
+	{
+		name = "spark5";
+		sound[] = {"\sounds\spark5.ogg", db+5, 1};
+		titles[] = {};
+	};
+
+	// END: electrical sparks
+
 };
 
 

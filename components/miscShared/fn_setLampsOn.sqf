@@ -12,24 +12,6 @@ _onoff = if (_isOn) then {0} else {0.95};
 _types =
 [
 	"Lamps_Base_F",
-	"Land_Jbad_Lamp_small",
-	"Land_jbad_House_c_10",
-	"Land_jbad_House_c_1_v2",
-	"Land_jbad_House_c_1",
-	"Land_Jbad_Mil_Guardhouse",
-	"Land_jbad_House_c_9",
-	"Land_jbad_House_c_3",
-	"Land_jbad_House_c_5_v1",
-	"Land_jbad_House_c_2",
-	"Land_jbad_House_c_5_v3",
-	"Land_jbad_House_c_5",
-	"Land_jbad_House_c_5_v2",
-	"Land_jbad_House_c_11",
-	"Land_jbad_House_c_12",
-	"Land_jbad_A_GeneralStore_01",
-	"Land_Jbad_Mil_House",
-	"Land_jbad_mosque_big_hq",
-	"Land_jbad_mosque_big_addon",
 	"Land_LampAirport_F",
 	"Land_LampSolar_F",
 	"Land_LampStreet_F",
@@ -63,7 +45,8 @@ for [{_i=0}, {_i < (count _types)}, {_i=_i+1}] do
 	sleep 0.1;
 
 	{
-		_x setDamage _onoff;
+		_damage = _x getVariable ["forceLampDamage", _onoff];
+		_x setDamage _damage;
 		sleep 0.01;
 
 	} forEach _lamps;

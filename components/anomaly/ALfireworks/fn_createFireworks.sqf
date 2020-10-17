@@ -5,12 +5,10 @@ if (!isServer) exitWith {};
 
 private ["_al_project","_time_life_projectile","_obj","_firsound","_firflut","_dur","_ro","_ve","_bl"];
 params ["_obj","_duration"];
-sleep random 5;
 
 if (!isNil {_obj getVariable "is_ON"}) exitwith {};
 _obj setVariable ["is_ON",true,true];
 
-sleep 5;
 
 endf=false;
 [_duration] spawn {
@@ -41,3 +39,5 @@ while {!endf} do {
 		sleep (_time_life_projectile + 1+ random 4);
 	};
 };
+
+_obj setVariable ["is_ON",false,true];

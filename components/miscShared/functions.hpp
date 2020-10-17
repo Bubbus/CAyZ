@@ -24,4 +24,8 @@ class miscShared
     class setLampsOn{};
     class substationEffects{};
     class activateGigObjective{};
+    class lampFlicker{};
+    class randomSparks{};
+    class onGigEnabled{};
+    class gigEffects{};
 };
