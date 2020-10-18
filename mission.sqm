@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2403;
+		nextID=2405;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={15516.536,52.598377,17484.498};
-		dir[]={-0.70030111,-0.41596517,0.58019197};
-		up[]={-0.32033786,0.9093613,0.26539719};
-		aside[]={0.63800776,-8.7823719e-007,0.77008247};
+		pos[]={15463.022,15.817842,17552.447};
+		dir[]={-0.71142191,-0.69057369,0.13070042};
+		up[]={-0.67933619,0.72312289,0.12480608};
+		aside[]={0.18069862,-8.8184606e-008,0.98358309};
 	};
 };
 binarizationWanted=0;
@@ -5174,7 +5174,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=694;
+		items=695;
 		class Item0
 		{
 			dataType="Logic";
@@ -26870,7 +26870,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.557,6.9426336,17557.607};
+				position[]={15456.557,6.9426336,17557.758};
 				angles[]={0,4.712389,6.2348919};
 			};
 			side="Empty";
@@ -26888,7 +26888,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15458.77,6.4857411,17558.984};
-				angles[]={-0,0.78539819,6.2348905};
+				angles[]={0,0.78539819,6.2348905};
 			};
 			side="Empty";
 			flags=4;
@@ -26906,7 +26906,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15459.487,6.4511352,17557.311};
-				angles[]={-0,4.7123895,6.2348905};
+				angles[]={0,4.7123895,6.2348905};
 			};
 			side="Empty";
 			flags=4;
@@ -26960,7 +26960,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15457.101,6.5662379,17559.65};
-				angles[]={-0,0,6.2348905};
+				angles[]={0,0,6.2348905};
 			};
 			side="Empty";
 			flags=4;
@@ -27049,7 +27049,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15454.608,6.6893525,17558.824};
+				position[]={15454.518,6.6937952,17558.852};
 				angles[]={-0,5.4977875,6.2332273};
 			};
 			side="Empty";
@@ -27060,14 +27060,14 @@ class Mission
 			};
 			id=2391;
 			type="PlasticBarrier_03_orange_F";
-			atlOffset=6.9141388e-005;
+			atlOffset=-2.9563904e-005;
 		};
 		class Item685
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15458.653,6.4702187,17551.664};
+				position[]={15458.87,6.462297,17551.75};
 				angles[]={6.2731848,2.356195,6.2432065};
 			};
 			side="Empty";
@@ -27078,7 +27078,7 @@ class Mission
 			};
 			id=2392;
 			type="PlasticBarrier_03_orange_F";
-			atlOffset=0.0001578331;
+			atlOffset=4.3392181e-005;
 		};
 		class Item686
 		{
@@ -27121,8 +27121,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.353,8.1670179,17554.373};
-				angles[]={0,3.6651924,4.712389};
+				position[]={15456.387,8.2485561,17554.418};
+				angles[]={0,3.6238251,4.712389};
 			};
 			side="Empty";
 			class Attributes
@@ -27130,24 +27130,23 @@ class Mission
 			};
 			id=2395;
 			type="PowerCable_01_CurveLong_F";
-			atlOffset=1.9712701;
+			atlOffset=2.0537167;
 		};
 		class Item689
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.452,6.716886,17556.711};
+				position[]={15456.407,6.6791291,17556.828};
 				angles[]={3.1415927,3.1415927,4.7606821};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{if (hasInterface and {!(missionNamespace getVariable ['gigActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Insulate power short"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(!(missionNamespace getVariable ['gigActive', false])) and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onGigEnabled},  " \n "{},  " \n "[],  " \n "10,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
 			};
 			id=2396;
 			type="PowerCable_01_Corner_F";
-			atlOffset=0.51499987;
+			atlOffset=0.43066597;
 		};
 		class Item690
 		{
@@ -27228,9 +27227,11 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.481,7.2267065,17557.129};
+				position[]={15456.378,6.2411699,17556.258};
+				angles[]={-0,0,6.2348928};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
@@ -27238,7 +27239,7 @@ class Mission
 			};
 			id=2399;
 			type="UserTexture1m_F";
-			atlOffset=1.0500002;
+			atlOffset=0.01508379;
 		};
 		class Item693
 		{
@@ -27256,6 +27257,24 @@ class Mission
 			};
 			id=2401;
 			type="UserTexture1m_F";
+		};
+		class Item694
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={15456.377,6.2046466,17556.34};
+				angles[]={0,0,6.2348919};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if (hasInterface and {!(missionNamespace getVariable ['gigActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Insulate power short"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(!(missionNamespace getVariable ['gigActive', false])) and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onGigEnabled},  " \n "{},  " \n "[],  " \n "10,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
+			};
+			id=2404;
+			type="Land_PortableSolarPanel_01_sand_F";
+			atlOffset=7.1525574e-006;
 		};
 	};
 	class Connections

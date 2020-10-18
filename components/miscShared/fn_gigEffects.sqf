@@ -15,5 +15,5 @@ RUN_AS_ASYNC(f_fnc_gigEffects);
 sleep 3;
 
 {
-    playSound3D ["a3\Music_F_Oldman\music\radio\rock\Track_R_22.ogg", _x, false, getPosASL _x, 4, 1, 1500];
+    playSound3D ["a3\Music_F_Oldman\music\radio\rock\Track_R_22.ogg", _x, false, getPosASL _x, 2, 1, 1500];
 } forEach [sound_blaster_1, sound_blaster_2];
