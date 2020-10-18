@@ -17,7 +17,7 @@ _voice_attk say3d [_attack_rumble, 2000];
 sleep 0.2;
 
 _doi_lum = "#lightpoint" createVehicle _attck_pos;
-_doi_lum setLightUseFlare true;
+_doi_lum setLightUseFlare false;
 _doi_lum setLightFlareSize 50;
 _doi_lum setLightFlareMaxDistance 1500;
 _doi_lum setLightAttenuation [12, 0, 80, 0, 15, 300];

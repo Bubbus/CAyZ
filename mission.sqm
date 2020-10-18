@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15463.022,15.817842,17552.447};
-		dir[]={-0.71142191,-0.69057369,0.13070042};
-		up[]={-0.67933619,0.72312289,0.12480608};
-		aside[]={0.18069862,-8.8184606e-008,0.98358309};
+		pos[]={15535.434,37.149796,17503.6};
+		dir[]={-0.87486374,-0.36573875,0.31784844};
+		up[]={-0.34398037,0.93059987,0.12497334};
+		aside[]={0.34150699,4.3015461e-008,0.9399789};
 	};
 };
 binarizationWanted=0;
@@ -16271,18 +16271,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15415.491,8.6140833,17553.596};
-				angles[]={5.8645334,2.1938868,5.6154375};
+				position[]={15415.49,8.6140213,17553.596};
+				angles[]={5.8645329,2.1938789,5.6154399};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    _this setDamage 0;" \n "};}";
 			};
 			id=1951;
 			type="Land_PortableLight_02_quad_black_F";
-			atlOffset=1.3310623;
+			atlOffset=1.3310003;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16312,18 +16312,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15422.845,8.3431377,17559.715};
-				angles[]={5.8752756,2.1847932,5.6232324};
+				position[]={15422.746,8.3453512,17559.77};
+				angles[]={5.8752666,2.1847856,5.6232243};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    _this setDamage 0;" \n "};}";
 			};
 			id=1953;
 			type="Land_PortableLight_02_quad_black_F";
-			atlOffset=0.68487215;
+			atlOffset=0.68500042;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16353,18 +16353,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15423.761,8.5831022,17569.637};
-				angles[]={5.8567233,2.2306542,5.6575723};
+				position[]={15423.761,8.5835142,17569.637};
+				angles[]={5.8567319,2.2306528,5.6575718};
 			};
 			side="Empty";
 			flags=1;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    _this setDamage 0;" \n "};}";
 			};
 			id=1956;
 			type="Land_PortableLight_02_quad_black_F";
-			atlOffset=0.92958784;
+			atlOffset=0.92999983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16786,7 +16786,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    _this setDamage 0;" \n "};}";
 				name="stagelamp_1";
 			};
 			id=1997;
@@ -16805,7 +16805,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    [_this] spawn f_fnc_lampFlicker;" \n "};}";
 				name="stagelamp_6";
 			};
 			id=1998;
@@ -16824,7 +16824,7 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    [_this] spawn f_fnc_lampFlicker;" \n "};}";
 				name="stagelamp_5";
 			};
 			id=1999;
@@ -16843,7 +16843,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    [_this] spawn f_fnc_lampFlicker;" \n "};}";
 				name="stagelamp_4";
 			};
 			id=2000;
@@ -16862,7 +16862,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    [_this] spawn f_fnc_lampFlicker;" \n "};}";
 				name="stagelamp_3";
 			};
 			id=2001;
@@ -27146,7 +27146,7 @@ class Mission
 			};
 			id=2396;
 			type="PowerCable_01_Corner_F";
-			atlOffset=0.43066597;
+			atlOffset=0.43067312;
 		};
 		class Item690
 		{
@@ -27159,7 +27159,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{this setVariable [""forceLampDamage"", 0, true];" \n "[this] spawn f_fnc_lampFlicker;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    _this setVariable [""forceLampDamage"", 0, true];" \n "    [_this] spawn f_fnc_lampFlicker;" \n "};}";
 				name="giglamp";
 			};
 			id=2397;
@@ -27227,19 +27227,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.378,6.2411699,17556.258};
-				angles[]={-0,0,6.2348928};
+				position[]={15456.378,6.2407331,17556.258};
+				angles[]={0,0,6.2348919};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    [_this, 1, 3] spawn f_fnc_randomSparks;" \n "};}";
 				name="stagesparks_3";
 			};
 			id=2399;
 			type="UserTexture1m_F";
-			atlOffset=0.01508379;
+			atlOffset=0.01465416;
 		};
 		class Item693
 		{
@@ -27253,7 +27253,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this spawn {if (isServer) then" \n "{" \n "    waitUntil {sleep 1; time > 20};" \n "    _anomaly = [getpos _this, 15, true] call f_fnc_createSparkyAnomaly;" \n "    [_anomaly] call f_fnc_addObjectsToAllZeuses;" \n "    deleteVehicle _this;" \n "}};}";
+				init="call{this spawn {if (isServer) then" \n "{" \n "    waitUntil {sleep 1; time > 20};" \n "    _anomaly = [getpos _this, 10, true] call f_fnc_createSparkyAnomaly;" \n "    [_anomaly] call f_fnc_addObjectsToAllZeuses;" \n "    deleteVehicle _this;" \n "}};}";
 			};
 			id=2401;
 			type="UserTexture1m_F";
@@ -27263,18 +27263,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15456.377,6.2046466,17556.34};
+				position[]={15456.377,6.2046394,17556.34};
 				angles[]={0,0,6.2348919};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{if (hasInterface and {!(missionNamespace getVariable ['gigActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Insulate power short"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(!(missionNamespace getVariable ['gigActive', false])) and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onGigEnabled},  " \n "{},  " \n "[],  " \n "10,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
+				init="call{if (hasInterface and {!(missionNamespace getVariable ['gigActive', false])}) then  " \n "{  " \n "    [  " \n "this,   " \n """Insulate power short"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_hack_ca.paa"",  " \n """(missionNamespace getVariable ['gigObjectiveActive', false]) and {!(missionNamespace getVariable ['gigActive', false])} and {_this distance _target < 2}"",  " \n """_caller distance _target < 2"",  " \n "{},  " \n "{},  " \n "{_this call f_fnc_onGigEnabled},  " \n "{},  " \n "[],  " \n "10,  " \n "0,  " \n "true,  " \n "false  " \n "    ] call BIS_fnc_holdActionAdd;  " \n "  " \n "};}";
+				createAsSimpleObject=1;
 			};
 			id=2404;
 			type="Land_PortableSolarPanel_01_sand_F";
-			atlOffset=7.1525574e-006;
 		};
 	};
 	class Connections

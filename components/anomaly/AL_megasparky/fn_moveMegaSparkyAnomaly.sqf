@@ -181,7 +181,7 @@ if (hasInterface) then
 
 
 
-sleep 3;
+//sleep 3;
 
 
 
@@ -248,11 +248,35 @@ if (isServer) then
 
 
 
+
+if (isServer) then
+{
+	waitUntil { sleep 0.5; _baseObj distance _obiect_orb > 5; };
+	[[], getPosATL _obiect_orb] call _sparkyAttack;
+};
+
+
+
+_lastPos = getPosATL _obiect_orb;
+
 waitUntil
 {
+	if (alive _obiect_orb) then {_lastPos = getPosATL _obiect_orb;};
+
 	sleep 1;
+
 	(!(alive _baseObj)) or {!(alive _obiect_orb)}
+
 };
+
+
+
+if (isServer) then
+{
+	[[], _lastPos] call _sparkyAttack;
+};
+
+
 
 deleteVehicle _baseObj;
 deleteVehicle _obiect_orb;
