@@ -9,6 +9,7 @@ params ["_poz_orig_sc", "_teritoriu", "_damage_flamer", "_hp_flamer"];
 
 
 _origin_flamer = "Land_ClutterCutter_large_F" createVehicle _poz_orig_sc;
+_origin_flamer setPosASL _poz_orig_sc;
 
 _flamer = createAgent ["O_Soldier_VR_F", _poz_orig_sc, [], 0, "NONE"];
 _flamer setVariable ["ace_medical_allowDamage", false, true];

@@ -145,7 +145,7 @@ fnc_burperAnomaly_anim_burp =
 		_obj_anim setdir _b_dir;
 
 		_height = 1 + (cos (time * 180)) * 0.3;
-		_obj_anim setPosATL [getposATL _obj_anim select 0, getposATL _obj_anim select 1, _height];
+		_obj_anim setPosATL [getposATL _work_obj select 0, getposATL _work_obj select 1, _height];
 		sleep 0.01;
 	};
 
@@ -163,6 +163,7 @@ while {alive _work_obj} do
 	waitUntil {sleep 2; (player distance _work_obj) < var_burperAnomaly_visibleDistance};
 
 	_burper_obj_sec = "Sign_Sphere25cm_F" createVehicleLocal [getposATL _work_obj select 0, getposATL _work_obj select 1, 0];
+	_burper_obj_sec setPosATL [getposATL _work_obj select 0, getposATL _work_obj select 1, 0];
 	_burper_obj_sec setObjectMaterial [0,"A3\Structures_F\Data\Windows\window_set.rvmat"];
 	_burper_obj_sec setObjectTextureglobal [0, "res\01_burper.jpg"];
 

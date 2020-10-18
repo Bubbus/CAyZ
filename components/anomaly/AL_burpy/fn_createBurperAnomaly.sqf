@@ -6,6 +6,8 @@ _anomaly_pos = _this select 0;
 _mobile_anomaly = _this select 1;
 
 _object_anom_burp = "Land_ClutterCutter_large_F" createVehicle _anomaly_pos;
+_object_anom_burp setPosASL _anomaly_pos;
+
 _balta_sang = "BloodSplatter_01_Medium_New_F" createVehicle _anomaly_pos;
 _balta_sang setdir (random 360);
 _balta_sang setVectorUp surfaceNormal position _balta_sang;

@@ -11,6 +11,7 @@ _radius = _this select 1;
 _AI_see_spark= _this select 2;
 
 _baseObj = "Land_HelipadEmpty_F" createVehicle _basePos;
+_baseObj setPosASL _basePos;
 
 [_baseObj, _radius, [35,40,45], 10] spawn f_fnc_posGeneratorMegaSparkyAnomaly;
 

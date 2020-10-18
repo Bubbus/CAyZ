@@ -139,7 +139,7 @@ _createMegaSparky100 =
 {
 	params ["_pos"];
 
-	[_pos vectorAdd [0,0,30], 100] remoteExec ["fnc_zen_createMegaSparky", 2];
+	[_pos, 100] remoteExec ["fnc_zen_createMegaSparky", 2];
 };
 
 ["Anomalies", "MEGA Sparky (200m)", _createMegaSparky100] call zen_custom_modules_fnc_register;

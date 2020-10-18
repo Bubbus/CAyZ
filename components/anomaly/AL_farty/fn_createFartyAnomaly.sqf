@@ -135,6 +135,7 @@ _no_puddles		 = _this select 6;
 obj_prot_toxic = _toxic_prot_mask;
 
 _farty_loc = "Land_HelipadEmpty_F" createVehicle _location_pos;
+_farty_loc setPosASL _location_pos;
 
 _puddles = [];
 
