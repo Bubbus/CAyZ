@@ -51,3 +51,24 @@ fnc_zen_createMegaSparky =
 	_anomaly = [_pos, _radius, true] call f_fnc_createMegaSparkyAnomaly;
 	[_anomaly] call f_fnc_addObjectsToAllZeuses;
 };
+
+
+fnc_zen_killTheLights =
+{
+	[false, "lightsmarker", 1500] call f_fnc_setLampsOn;
+};
+
+
+fnc_zen_lightTheLights =
+{
+	[true, "lightsmarker", 1500] call f_fnc_setLampsOn;
+};
+
+
+fnc_zen_makePlayerSpawner =
+{
+	params ["_pos"];
+	
+	_spawner = [_pos] call f_fnc_createPlayerSpawner;
+	[_spawner] call f_fnc_addObjectsToAllZeuses;
+};

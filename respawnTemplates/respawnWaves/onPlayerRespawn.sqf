@@ -116,13 +116,20 @@ if (_hasBeenKilled) then
     {
         sleep 0.5;
 
-        _waveInfo = GET_RESPAWN_WAVE(_side);
+        _hasSpawner = !(isNull (_unit getVariable ["mySpawner", objNull]));
+        if (_hasSpawner) exitWith { true };
 
-        if (_waveInfo isEqualTo []) exitWith {false};
-        if (((count _waveInfo) > 0) and {(_waveInfo select 0) isEqualTo true}) exitWith { true };
+        _waveInfo = GET_RESPAWN_WAVE(_side);
+        _hasWave = ((count _waveInfo) > 0) and {(_waveInfo select 0) isEqualTo true};
+        if (_hasWave) exitWith { true };
 
 		false
 
+    };
+
+    if !((_unit getVariable ["mySpawner", objNull]) isEqualTo objNull) then
+    {
+        _waveInfo = [true, _unit getVariable ["mySpawner", objNull], "", time];
     };
 
     DEBUG_PRINT_LOG("[RespawnWaves] Respawn wave enabled, teleporting...")

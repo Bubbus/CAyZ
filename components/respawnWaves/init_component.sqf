@@ -53,7 +53,7 @@ if (hasInterface) then
 	{
 		waitUntil
 		{
-			_canRespawn = (rank player == 'COLONEL');
+			_canRespawn = (player getVariable ["f_var_isZeus", false]);
 
 			if !(_canRespawn) then
 			{

@@ -30,4 +30,5 @@ class miscShared
     class randomSparks{};
     class onGigEnabled{};
     class gigEffects{};
+    class createPlayerSpawner{};
 };
