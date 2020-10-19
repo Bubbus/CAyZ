@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2408;
+		nextID=2421;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7;
+		nextID=9;
 	};
 	class Camera
 	{
-		pos[]={15818.993,391.01993,14838.912};
-		dir[]={-0.051413901,-0.58273435,0.81103814};
-		up[]={-0.036867272,0.81265998,0.58157057};
-		aside[]={0.997998,-1.561275e-007,0.063265547};
+		pos[]={15523.559,400.18542,14775.588};
+		dir[]={0.69197983,-0.69257373,0.2038199};
+		up[]={0.66435844,0.72134143,0.19568379};
+		aside[]={0.28254852,-2.2049062e-007,-0.95926666};
 	};
 };
 binarizationWanted=0;
@@ -101,6 +101,9 @@ addons[]=
 	"UK3CB_Factions_CHC_C",
 	"A3_Weapons_F_Items",
 	"ace_medical_engine",
+	"Cre8ive_Weapons",
+	"UK3CB_Factions_Headgear",
+	"UK3CB_Factions_Equipment_Vests",
 	"A3_Structures_F_Items_Electronics",
 	"A3_Props_F_Enoch_Industrial_Electric",
 	"A3_Structures_F_Enoch_VR_Helpers",
@@ -122,7 +125,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=64;
+		items=66;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -468,66 +471,79 @@ class AddonsMetaData
 		};
 		class Item53
 		{
+			className="Cre8ive_Weapons";
+			name="Cre8ive - Custom Weapons";
+			author="Cre8or";
+		};
+		class Item54
+		{
+			className="UK3CB_Factions_Equipment";
+			name="3CB Factions - Equipment";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
+		class Item55
+		{
 			className="A3_Structures_F_Enoch";
 			name="Arma 3 Contact Platform - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item54
+		class Item56
 		{
 			className="Cre8ive_Radiation";
 			name="Cre8ive - Radiation Hazards";
 			author="Cre8or";
 		};
-		class Item55
+		class Item57
 		{
 			className="A3_Boat_F_Exp";
 			name="Arma 3 Apex - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item56
+		class Item58
 		{
 			className="CUP_CAStructuresHouse_HouseV";
 			name="CUP_CAStructuresHouse_HouseV";
 		};
-		class Item57
+		class Item59
 		{
 			className="CUP_CAStructuresShed_Small";
 			name="CUP_CAStructuresShed_Small";
 		};
-		class Item58
+		class Item60
 		{
 			className="CUP_CAStructuresBarn_W";
 			name="CUP_CAStructuresBarn_W";
 		};
-		class Item59
+		class Item61
 		{
 			className="CUP_CAStructuresLand_Nav_Boathouse";
 			name="CUP_CAStructuresLand_Nav_Boathouse";
 		};
-		class Item60
+		class Item62
 		{
 			className="A3_Static_F_Destroyer";
 			name="CFGPATCHES_A3_Static_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item61
+		class Item63
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item62
+		class Item64
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item63
+		class Item65
 		{
 			className="A3_Structures_F_Kart";
 			name="Arma 3 Karts - Buildings and Structures";
@@ -597,7 +613,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=76;
+									items=79;
 									class Item0
 									{
 										class data
@@ -1662,6 +1678,48 @@ class CustomAttributes
 											value="sss_setting_milsimmodelogistics";
 										};
 									};
+									class Item76
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_spectator_restrictmodes";
+										};
+									};
+									class Item77
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_spectator_restrictvisions";
+										};
+									};
+									class Item78
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_spectator_maxfollowdistance";
+										};
+									};
 								};
 							};
 						};
@@ -1678,7 +1736,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=76;
+									items=79;
 									class Item0
 									{
 										class data
@@ -5099,6 +5157,141 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item76
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item77
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item78
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=5;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -8392,6 +8585,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				fuel=0.21219863;
 				init="call{[this, ""civ_casual_clothes""] call f_fnc_assignLoot; [this, ""civ_farm_gun""] call f_fnc_assignLoot;}";
 			};
 			id=1503;
@@ -17251,13 +17445,14 @@ class Mission
 				angles[]={0,2.1974568,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{[this, ""surv_supplies""] call f_fnc_assignLoot;}";
 			};
 			id=2028;
 			type="rhs_mags_crate";
-			atlOffset=3.3039987;
+			atlOffset=0.00041770935;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17538,7 +17733,7 @@ class Mission
 			};
 			id=2035;
 			type="Box_Syndicate_Wps_F";
-			atlOffset=2.2198887;
+			atlOffset=2.2200007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17612,14 +17807,13 @@ class Mission
 				angles[]={0,2.2428005,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="call{[this, ""civ_casual_clothes_big""] call f_fnc_assignLoot;}";
 			};
 			id=2040;
 			type="Box_EAF_Grenades_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=2.1223166;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17734,13 +17928,14 @@ class Mission
 				angles[]={0,3.0752702,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{[this, ""civ_farm_gun""] call f_fnc_assignLoot;}";
 			};
 			id=2049;
 			type="rhs_7ya37_1_single";
-			atlOffset=3.2719994;
+			atlOffset=0.00025558472;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17822,7 +18017,7 @@ class Mission
 			};
 			id=2054;
 			type="rhs_mags_crate";
-			atlOffset=0.23234522;
+			atlOffset=0.23300004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18144,7 +18339,7 @@ class Mission
 			};
 			id=2066;
 			type="rhs_7ya37_1_single";
-			atlOffset=0.12698388;
+			atlOffset=0.00037646294;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18265,7 +18460,6 @@ class Mission
 			};
 			id=2073;
 			type="rhs_spec_weapons_crate";
-			atlOffset=0.00013160706;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18306,7 +18500,6 @@ class Mission
 			};
 			id=2079;
 			type="Box_GEN_Equip_F";
-			atlOffset=7.6293945e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19349,7 +19542,7 @@ class Mission
 			};
 			id=2121;
 			type="Box_Syndicate_Ammo_F";
-			atlOffset=3.4970779;
+			atlOffset=3.4970818;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19704,13 +19897,13 @@ class Mission
 				angles[]={0,0.26830357,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="call{[this, ""civ_worker_clothes""] call f_fnc_assignLoot;}";
 			};
 			id=2134;
 			type="rhs_weapon_crate";
-			atlOffset=0.32411194;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20513,7 +20706,7 @@ class Mission
 			};
 			id=2161;
 			type="rhs_spec_weapons_crate";
-			atlOffset=3.7725468;
+			atlOffset=3.3400517;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23612,8 +23805,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15624.722,279.27582,14841.382};
-						angles[]={0.0050033992,3.6927221,0.098017827};
+						position[]={15624.722,279.27579,14841.382};
+						angles[]={0.0050090947,3.6927152,0.098017693};
 					};
 					side="West";
 					flags=4;
@@ -23646,7 +23839,6 @@ class Mission
 					};
 					id=1140;
 					type="B_soldier_M_F";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -23816,8 +24008,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15618.986,278.80161,14841.195};
-						angles[]={0.0033296358,3.6927221,0.081483603};
+						position[]={15618.986,278.80157,14841.196};
+						angles[]={0.0033335788,3.6927152,0.081489421};
 					};
 					side="West";
 					flags=4;
@@ -23850,7 +24042,6 @@ class Mission
 					};
 					id=1142;
 					type="B_soldier_LAT_F";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -25844,7 +26035,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -25988,6 +26179,147 @@ class Mission
 					id=2283;
 					type="B_Soldier_TL_F";
 					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={15608.947,278.99246,14820.182};
+						angles[]={0.059934605,3.8701801,0.020001473};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="COLONEL";
+						init="call{[""chef"", this] call f_fnc_assignGear;}";
+						description="Le Chef";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="Cre8ive_Rfl_CV_557";
+								class primaryMuzzleMag
+								{
+									name="Cre8ive_Mag_CV_557_5Rnd_Tracer_Red";
+									ammoLeft=5;
+								};
+							};
+							class uniform
+							{
+								typeName="UK3CB_CHC_C_U_DOC_01";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="ACE_elasticBandage";
+										count=4;
+									};
+									class Item1
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_splint";
+										count=2;
+									};
+									class Item3
+									{
+										name="ACE_tourniquet";
+										count=2;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="UK3CB_V_Pouch";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="Cre8ive_Mag_CV_557_5Rnd_Tracer_Red";
+										count=5;
+										ammoLeft=5;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							headgear="UK3CB_H_Turban_Neckwrap_01_Whi";
+						};
+					};
+					id=2420;
+					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
