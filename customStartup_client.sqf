@@ -143,3 +143,399 @@ _createMegaSparky100 =
 };
 
 ["Anomalies", "MEGA Sparky (200m)", _createMegaSparky100] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_3Ya40_1_single" createVehicle _pos;
+	
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_med_small"] spawn f_fnc_assignLoot;   
+};
+
+["Lootboxes (Civilian)", "Medical (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_gear_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_med_medium"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Medical (Medium)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_spec_weapons_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_med_large"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Medical (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_spec_weapons_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_med_large"] spawn f_fnc_assignLoot;  
+	[_object, "civ_med_large"] spawn f_fnc_assignLoot;  
+
+};
+
+["Lootboxes (Civilian)", "Medical (Mass Cas)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_gear_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_supplies"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Supplies", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_7ya37_1_single" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_supplies_small"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Supplies (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_7ya37_1_single" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_farm_gun"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Guns (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_farm_guns"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Guns", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_Ammo_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_casual_clothes"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Clothes (Casual)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_gear_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_casual_clothes_big"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Clothes (Casual, Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_farmer_clothes"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Clothes (Farmer)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_WpsLaunch_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_worker_clothes"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Clothes (Worker)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_GEN_Equip_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "civ_fancy_clothes"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Civilian)", "Clothes (Fancy)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "surv_guns"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Survivor)", "Guns", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_weapon_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "surv_guns_big"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Survivor)", "Guns (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_gear_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "surv_supplies"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Survivor)", "Supplies", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_Syndicate_Ammo_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "surv_supplies_small"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Survivor)", "Supplies (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_GEN_Equip_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "cop_uniforms_small"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Police)", "Uniforms (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_gear_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "cop_uniforms_big"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Police)", "Uniforms (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "rhs_weapon_crate" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "cop_armoury"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Police)", "Armoury", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_NATO_Ammo_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "mil_armoury"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Military)", "Armoury", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_NATO_Wps_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "mil_armoury"] spawn f_fnc_assignLoot;  
+	[_object, "mil_armoury"] spawn f_fnc_assignLoot;  
+
+};
+
+["Lootboxes (Military)", "Armoury (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_NATO_Equip_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "mil_uniforms_small"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Military)", "Uniforms (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+    
+    _object = "Box_NATO_Equip_F" createVehicle _pos;
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "mil_uniforms_big"] spawn f_fnc_assignLoot;  
+};
+
+["Lootboxes (Military)", "Uniforms (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
