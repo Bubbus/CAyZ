@@ -18,6 +18,8 @@ class miscShared
 	class giveUnitGodmode{};
     class applyInsignia{};
     class formatTimeDuration{};
+    class tryRunOnHeadlessClient{};
+    class monitorHeadlessClients{};
     class addObjectsToAllZeuses{};
     class woundUnitRandomly{};
     class onSubstationEnabled{};

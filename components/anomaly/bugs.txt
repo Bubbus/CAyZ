@@ -1,2 +1,1 @@
-Burper doesn't move with base ent in MP
 Flamer still dies from jumping.
