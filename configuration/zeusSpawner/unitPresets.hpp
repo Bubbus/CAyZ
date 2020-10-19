@@ -97,7 +97,7 @@ class CA_ZeusUI_Units
 
 	class OPFOR_Infantry
 	{
-		categoryName = "OPFOR Infantry";
+		categoryName = "Looty Boys";
 		gear = "opf_f";
 		side = "east";
 
@@ -106,6 +106,12 @@ class CA_ZeusUI_Units
 		{
 			unitName = "OPFOR Rifleman";		// This is the name of the squad which will be shown in-game.
 			units[] = {"rif"};			// This is the squad which will spawn - this just spawns one rifleman.
+		};
+
+		class Patrol_2x
+		{
+			unitName = "OPFOR Patrol 2x";
+			units[] = {"rif", "ar"};
 		};
 
 		class Fireteam_4x
@@ -147,42 +153,48 @@ class CA_ZeusUI_Units
 
 	class OPFOR_Vehicles
 	{
-		categoryName = "OPFOR Vehicles";
+		categoryName = "Looty Cars";
 		gear = "opf_f";
 		side = "east";
 
-		class T100_Varsuk		// Classnames can't contain '-'
+		class Hilux_Dshkm	
 		{
-			unitName = "T-100 Varsuk";
-			vehicle = "O_MBT_02_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Hilux (Dshkm)";
+			vehicle = "UK3CB_TKM_O_Hilux_Dshkm";
+			units[] = {"rif", "rif", "rif"};
 		};
 
-		class MSE3_Marid
+		class Hilux
 		{
-			unitName = "MSE-3 Marid";
-			vehicle = "O_APC_Wheeled_02_rcws_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Hilux";
+			vehicle = "UK3CB_TKM_O_Hilux_Open";
+			units[] = {"rif", "rif", "rif"};
 		};
 
-		class BTRK_Kamysh
+		class Hilux_Rocket
 		{
-			unitName = "BTR-K Kamysh";
-			vehicle = "O_APC_Tracked_02_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Hilux (Rocket)";
+			vehicle = "UK3CB_TKM_O_Hilux_Rocket_Arty";
+			units[] = {"rif", "rif"};
 		};
-
-		class Ifrit_HMG
+		class Hilux_PKM
 		{
-			unitName = "Ifrit HMG";
-			vehicle = "O_MRAP_02_HMG_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Hilux (PKM)";
+			vehicle = "UK3CB_TKM_O_Hilux_Pkm";
+			units[] = {"rif", "rif", "rif"};
+		};
+				
+		class Hilux_SPG
+		{
+			unitName = "Hilux (SPG)";
+			vehicle = "UK3CB_TKM_O_Hilux_Spg9";
+			units[] = {"rif", "rif", "rif"};
 		};
 	};
 
 	class INDFOR_Infantry
 	{
-		categoryName = "INDFOR Infantry";
+		categoryName = "Lobsterbacks";
 		gear = "ind_f";
 		side = "resistance";
 
@@ -191,6 +203,12 @@ class CA_ZeusUI_Units
 		{
 			unitName = "INDFOR Rifleman";		// This is the name of the squad which will be shown in-game.
 			units[] = {"rif"};			// This is the squad which will spawn - this just spawns one rifleman.
+		};
+
+		class Patrol_2x
+		{
+			unitName = "INDFOR Patrol 2x";
+			units[] = {"rif", "ar"};
 		};
 
 		class Fireteam_4x
@@ -232,36 +250,36 @@ class CA_ZeusUI_Units
 
 	class INDFOR_Vehicles
 	{
-		categoryName = "INDFOR Vehicles";
+		categoryName = "Lobstercars";
 		gear = "ind_f";
 		side = "resistance";
 
 		class MBT52_Kuma		// Classnames can't contain '-'
 		{
-			unitName = "MBT-52 Kuma";
-			vehicle = "I_MBT_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Husky HMG";
+			vehicle = "UK3CB_BAF_Husky_Passenger_HMG_Green_DPMT";
+			units[] = {"rif", "rif", "rif"};
 		};
 
 		class AFV4_Gorgon
 		{
-			unitName = "AFV-4 Gorgon";
-			vehicle = "I_APC_Wheeled_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Transport Truck";
+			vehicle = "UK3CB_BAF_MAN_HX58_Transport_Green_DPMT";
+			units[] = {"rif", "rif"};
 		};
 
 		class FV720_Mora
 		{
-			unitName = "FV-720 Mora";
-			vehicle = "I_APC_tracked_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Bulldog RWS (APC)";
+			vehicle = "UK3CB_BAF_FV432_Mk3_RWS_Green_DPMT";
+			units[] = {"rif", "rif", "rif"};
 		};
 
 		class Strider_HMG
 		{
-			unitName = "Strider HMG";
-			vehicle = "I_MRAP_03_hmg_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Warrior (Big Bad APC)";
+			vehicle = "UK3CB_BAF_Warrior_A3_W_MTP";
+			units[] = {"rif", "rif", "rif"};
 		};
 	};
 };

@@ -39,6 +39,13 @@ CREATE_LOADOUT(co,_baseLoadout);
 COPY_ADDONS(co,rif);
 
 
+// Le Chef
+
+_baseLoadout = [["Cre8ive_Rfl_CV_557","","","",["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5],[],""],[],[],["UK3CB_CHC_C_U_DOC_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2]]],["UK3CB_V_Pouch",[["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5,5]]],[],"UK3CB_H_Turban_Neckwrap_01_Whi","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(chef,_baseLoadout);
+
+
 // Zeus
 
 _baseLoadout = [["Cre8ive_Rfl_CV_Goose_SO","","","",["Cre8ive_Mag_2Rnd_Slug",2],[],""],[],[],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["ACRE_PRC148",1],["ACRE_PRC152",1]]],["rhs_vest_commander",[["Cre8ive_Mag_2Rnd_Slug",20,2]]],[],"rhs_altyn","",["Laserdesignator_01_khk_F","","","",["Laserbatteries",1],[],""],["ItemMap","","","ItemCompass","ItemWatch",""]];
