@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={15523.559,400.18542,14775.588};
-		dir[]={0.69197983,-0.69257373,0.2038199};
-		up[]={0.66435844,0.72134143,0.19568379};
-		aside[]={0.28254852,-2.2049062e-007,-0.95926666};
+		pos[]={15466.652,44.656483,17543.973};
+		dir[]={-0.74647576,-0.4753511,0.46564859};
+		up[]={-0.40331894,0.87979257,0.25158861};
+		aside[]={0.52926731,-7.9395249e-008,0.84846228};
 	};
 };
 binarizationWanted=0;
@@ -27130,7 +27130,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    [_this, 1, 3] spawn f_fnc_randomSparks;" \n "};}";
 				name="stagesparks_1";
 			};
 			id=2374;
@@ -27147,7 +27147,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[this, 1, 3] spawn f_fnc_randomSparks;}";
+				init="call{this spawn " \n "{" \n "    waitUntil {sleep 5; missionNamespace getVariable [""gigObjectiveActive"", false]};" \n "" \n "    [_this, 1, 3] spawn f_fnc_randomSparks;" \n "};}";
 				name="stagesparks_2";
 			};
 			id=2375;
@@ -27578,7 +27578,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this spawn {if (isServer) then" \n "{" \n "    waitUntil {sleep 1; time > 20};" \n "    _anomaly = [getpos _this, 10, true] call f_fnc_createSparkyAnomaly;" \n "    [_anomaly] call f_fnc_addObjectsToAllZeuses;" \n "    deleteVehicle _this;" \n "}};}";
+				init="call{this spawn {if (isServer) then" \n "{" \n "    waitUntil {sleep 1; time > 20};" \n "    _anomaly = [getPosASL _this, 10, true] call f_fnc_createSparkyAnomaly;" \n "    [_anomaly] call f_fnc_addObjectsToAllZeuses;" \n "    deleteVehicle _this;" \n "}};}";
 			};
 			id=2401;
 			type="UserTexture1m_F";
