@@ -150,6 +150,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_3Ya40_1_single" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -167,6 +168,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_gear_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -184,6 +186,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_spec_weapons_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -200,6 +203,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_spec_weapons_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -219,6 +223,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_gear_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -235,6 +240,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_7ya37_1_single" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -251,6 +257,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_7ya37_1_single" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -267,6 +274,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -283,6 +291,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_Ammo_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -300,6 +309,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_gear_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -317,6 +327,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -334,6 +345,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_WpsLaunch_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -351,6 +363,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_GEN_Equip_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -367,6 +380,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_Wps_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -383,6 +397,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_weapon_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -399,6 +414,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_gear_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -415,6 +431,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_Syndicate_Ammo_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -431,6 +448,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_GEN_Equip_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -447,6 +465,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_gear_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -463,6 +482,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "rhs_weapon_crate" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -479,6 +499,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_NATO_Ammo_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -495,6 +516,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_NATO_Wps_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -513,6 +535,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_NATO_Equip_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
@@ -529,7 +552,7 @@ _spawnLootbox =
     params ["_pos"];
 
     _object = "Box_NATO_Equip_F" createVehicle _pos;
-
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
 	clearItemCargoGlobal _object;
