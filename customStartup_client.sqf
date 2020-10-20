@@ -564,6 +564,38 @@ _spawnLootbox =
 ["[CayZ] Lootboxes (Military)", "Uniforms (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
 
 
+_spawnLootbox =
+{
+    params ["_pos"];
+
+    _object = "Box_Syndicate_Ammo_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "med_crbn_small"] spawn f_fnc_assignLoot;
+};
+
+["[CayZ] Lootboxes (CRBN)", "CBRN (Small)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+_spawnLootbox =
+{
+    params ["_pos"];
+
+    _object = "Box_NATO_Equip_F" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "med_crbn_large"] spawn f_fnc_assignLoot;
+};
+
+["[CayZ] Lootboxes (CRBN)", "CBRN (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
 _killLights =
 {
 	[] remoteExec ["fnc_zen_killTheLights", 2];
