@@ -198,12 +198,12 @@ _sparkyAttack =
 
 		if (_x isKindOf "CAManBase") then
 		{
-			[_x, 12 - _distance, nil, nil, [0.4, 0.6, 0.8]] call f_fnc_woundUnitRandomly;
+			[_x, 18 - _distance, nil, nil, [0.8, 0.9, 1]] call f_fnc_woundUnitRandomly;
 		}
 		else
 		{
 			_damage = damage _x;
-			_x setDamage _damage + (1 - _distance * 0.1);
+			_x setDamage _damage + (1 - _distance * 0.05);
 		};
 
 	} forEach _units;

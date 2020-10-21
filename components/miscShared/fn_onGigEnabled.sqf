@@ -3,8 +3,8 @@
 
 if (missionNamespace getVariable ['gigActive', false]) exitWith {};
 
-RUN_ON_SERVER(f_fnc_onSubstationEnabled,_this);
-RUN_AS_ASYNC(f_fnc_onSubstationEnabled);
+RUN_ON_SERVER(f_fnc_onGigEnabled,_this);
+RUN_AS_ASYNC(f_fnc_onGigEnabled);
 
 missionNamespace setVariable ['gigActive', true, true];
 

@@ -196,6 +196,8 @@ if (_hasBeenKilled) then
 
     [_unit, _corpse, true] call _doRespawn;
 
+    _unit setVariable ["mySpawner", objNull, true];
+    
     DEBUG_PRINT_LOG("[RespawnWaves] All done.")
 
 }
