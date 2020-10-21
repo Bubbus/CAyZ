@@ -621,3 +621,20 @@ _playerSpawner =
 };
 
 ["[CayZ] Utilities", "Create player spawner", _playerSpawner] call zen_custom_modules_fnc_register;
+
+
+_hellblaster =
+{
+	params ["_pos"];
+
+	systemChat "The hellblast is coming.  The mission will end in 110 seconds.  You are not safe.";
+	[_pos] remoteExec ["f_fnc_createHellblast", 2];
+
+	[] spawn
+	{
+		uiSleep 110;
+		["end1"] remoteExec ['f_fnc_broadcastEnding', 2];
+	};
+};
+
+["[CayZ] END GAME HELLBLASTER", "SEND THEM TO BRASIL", _hellblaster] call zen_custom_modules_fnc_register;

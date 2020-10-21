@@ -17,7 +17,6 @@ _spawner spawn
     while {alive _this} do
     {
         _group = GET_SQUAD_ON_SIDE_DYNAMIC("Spectators",west);
-        systemChat format ["got group %1", _group];
 
         waitUntil
         {
@@ -29,7 +28,6 @@ _spawner spawn
         if !(isNull _group) then
         {
             _unit = selectRandom units _group;
-            systemChat format ["got unit %1", _unit];
             _unit setVariable ["mySpawner", _this, true];
 
             hideObjectGlobal _this;
