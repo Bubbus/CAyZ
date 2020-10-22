@@ -676,3 +676,15 @@ _hellblaster =
 };
 
 ["[CayZ] END GAME HELLBLASTER", "SEND THEM TO BRASIL", _hellblaster] call zen_custom_modules_fnc_register;
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 25, 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (25m)", _jamming] call zen_custom_modules_fnc_register;
+
+

@@ -184,9 +184,9 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
+		title = "Mission Failed";
 		subtitle = "";
-		description = "Please post to the AAR thread!";
+		description = "We'll Get 'Em Next Time!";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
@@ -194,9 +194,9 @@ class CfgDebriefing
 
 	class End3
 	{
-		title = "Ending #3";
+		title = "Someone Survived";
 		subtitle = "";
-		description = "Please post to the AAR thread!";
+		description = "Wait, this isn't in the script...";
 		// pictureBackground = "";
 		// picture = "";
 		// pictureColor[] = {0.0,0.3,0.6,1};
