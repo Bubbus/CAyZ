@@ -27,9 +27,9 @@ class Header
 // ============================================================================================
 
 
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the CA2 Framework";
-author = "*** Insert mission author name here. ***";
+onLoadName = "Black Tempest";
+onLoadMission = "boo";
+author = "Gibbs and Bubbus";
 loadScreen = "ca_logo_large.jpg";
 
 
@@ -174,7 +174,7 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
+		title = "End";
 		subtitle = "";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";

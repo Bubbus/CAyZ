@@ -564,6 +564,44 @@ _spawnLootbox =
 ["[CayZ] Lootboxes (Military)", "Uniforms (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
 
 
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+
+    _object = "rhs_3Ya40_1_single" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "med_small_crbnchance"] spawn f_fnc_assignLoot;
+};
+
+["[CayZ] Lootboxes (CRBN)", "Medical (Small, CRBN chance)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
+_spawnLootbox =
+{
+    params ["_pos"];
+
+    _object = "rhs_3Ya40_1_single" createVehicle _pos;
+	[_object] remoteExec ["f_fnc_addObjectsToAllZeuses", 2];
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
+	clearItemCargoGlobal _object;
+	clearBackpackCargoGlobal _object;
+
+    [_object, "med_large_crbnchance"] spawn f_fnc_assignLoot;
+};
+
+["[CayZ] Lootboxes (CRBN)", "Medical (Large, CRBN chance)", _spawnLootbox] call zen_custom_modules_fnc_register;
+
+
 _spawnLootbox =
 {
     params ["_pos"];
