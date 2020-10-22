@@ -681,10 +681,127 @@ _jamming =
 {
 	params ["_object"];
 
-	[_object, 25, 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+	[_object, 50, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
 
 };
 
-["[CayZ] Jamming", "Radio Jammer (25m)", _jamming] call zen_custom_modules_fnc_register;
+["[CayZ] Jamming", "Radio Jammer (50m)", _jamming] call zen_custom_modules_fnc_register;
 
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 75, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (75m)", _jamming] call zen_custom_modules_fnc_register;
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 100, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (100m)", _jamming] call zen_custom_modules_fnc_register;
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 150, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (150m)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 250, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (250m)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 500, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (500m)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 750, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (750m)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 1000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (1km)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 2000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (2km)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 3000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (3km)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 4000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (4km)", _jamming] call zen_custom_modules_fnc_register;
+
+
+_jamming =
+{
+	params ["_object"];
+
+	[_object, 5000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+
+};
+
+["[CayZ] Jamming", "Radio Jammer (5km)", _jamming] call zen_custom_modules_fnc_register;
 
