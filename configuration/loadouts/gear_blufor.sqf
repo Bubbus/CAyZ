@@ -67,6 +67,9 @@ _baseLoadout = [["Cre8ive_Rfl_CV_557","","","",["Cre8ive_Mag_CV_557_5Rnd_Tracer_
 
 CREATE_LOADOUT(chef,_baseLoadout);
 
+_baseLoadout = [["Cre8ive_Rfl_CV_557","","","",["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5],[],""],[],[],["UK3CB_CHC_C_U_PROF_02",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2]]],["UK3CB_V_Pouch",[["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5,5]]],[],"H_Hat_grey","rhsusf_shemagh_white",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(som,_baseLoadout);
 
 // Zeus
 
