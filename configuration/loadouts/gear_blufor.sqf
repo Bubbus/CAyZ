@@ -8,9 +8,13 @@ BEGIN_LOADOUTS;
 
 // Camper Loadout
 
-_baseLoadout = [[],[],[],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+_baseLoadout = [[],[],[],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["ACE_HandFlare_Red",2,1]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(rif,_baseLoadout);
+
+_variant = [[],[],["ACE_Flashlight_Maglite_ML300L","","","",[],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+ADD_VARIANT(rif,_variant);
+
 
 ADD_UNIFORM(rif,"UK3CB_CHC_C_U_HIKER_01");
 ADD_UNIFORM(rif,"UK3CB_CHC_C_U_HIKER_02");
@@ -43,8 +47,18 @@ COPY_ADDONS(co,rif);
 
 _baseLoadout = [[],[],["rhs_weap_tt33","","","",["rhs_mag_762x25_8",8],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["rhs_mag_762x25_8",2,8]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
 
-CREATE_LOADOUT(co,_baseLoadout);
-COPY_ADDONS(pist,rif);
+CREATE_LOADOUT(pistol,_baseLoadout);
+
+_variant = [[],[],["rhs_weap_type94_new","","","",["rhs_mag_6x8mm_mhp",6],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["rhs_mag_6x8mm_mhp",3,6]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+ADD_VARIANT(pistol,_variant);
+
+_variant = [[],[],["rhs_weap_makarov_pm","","","",["rhs_mag_9x18_8_57N181S",8],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["rhs_mag_9x18_8_57N181S",2,8]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+ADD_VARIANT(pistol,_variant);
+
+_variant = [[],[],["Cre8ive_Pst_CV_Ruka_357","","","",["Cre8ive_Mag_6Rnd_357_Speedloader_Tracer_Red",6],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["Cre8ive_Mag_6Rnd_357_Speedloader",3,6]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+ADD_VARIANT(pistol,_variant);
+
+COPY_ADDONS(pistol,rif);
 
 
 // Le Chef

@@ -677,21 +677,24 @@ _hellblaster =
 
 ["[CayZ] END GAME HELLBLASTER", "SEND THEM TO BRASIL", _hellblaster] call zen_custom_modules_fnc_register;
 
+
 _jamming =
 {
-	params ["_obj"];
-	if !(isnull _obj) then {
-		[_object, 50, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+	params ["_pos", "_obj"];
+
+	if !(isNull _obj) then {
+		[_obj, 50, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
 ["[CayZ] Jamming", "Radio Jammer (50m)", _jamming] call zen_custom_modules_fnc_register;
 
+
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 75, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 75, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -699,9 +702,9 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 100, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 100, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -709,9 +712,9 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 150, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 150, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -720,9 +723,9 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 250, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 250, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -731,9 +734,9 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 500, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 500, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -742,20 +745,19 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 750, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 750, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
 ["[CayZ] Jamming", "Radio Jammer (750m)", _jamming] call zen_custom_modules_fnc_register;
-
-
+//
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 1000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 1000, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -764,9 +766,9 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 2000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 2000, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
@@ -775,32 +777,30 @@ _jamming =
 
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 3000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 3000, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
 ["[CayZ] Jamming", "Radio Jammer (3km)", _jamming] call zen_custom_modules_fnc_register;
 
-
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 4000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 4000, 0, 0, 0, 0, 0] remoteExec ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
+};
 
 ["[CayZ] Jamming", "Radio Jammer (4km)", _jamming] call zen_custom_modules_fnc_register;
 
-
 _jamming =
 {
-	params ["_obj"];
+	params ["_pos", "_obj"];
 	if !(isnull _obj) then {
-		[_object, 5000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
+		[_obj, 5000, 0, 0, 0, 0, 0] remoteExec  ["kyk_ew_fnc_broadcastJammerAdd", 2];
 	};
 };
 
 ["[CayZ] Jamming", "Radio Jammer (5km)", _jamming] call zen_custom_modules_fnc_register;
-

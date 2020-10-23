@@ -13,9 +13,7 @@ _AI_see_spark= _this select 2;
 _baseObj = "Land_HelipadEmpty_F" createVehicle _basePos;
 _baseObj setPosASL _basePos;
 
-[_baseObj, _radius] spawn f_fnc_posGeneratorSparkyAnomaly;
-
-[_baseObj] remoteExec ["f_fnc_moveSparkyAnomaly", 0, true];
+[_baseObj, _radius] remoteExec ["f_fnc_moveSparkyAnomaly", 0, true];
 
 if (_AI_see_spark) then
 {

@@ -4,19 +4,29 @@ var_megaSparkyAnomaly_visibleDistance = 2500;
 private ["_obiect_orb","_mark_orig"];
 
 _baseObj = _this select 0;
+_radius = _this select 1;
 
 if !(alive _baseObj) exitWith {};
 
-waitUntil { sleep 1; !(_baseObj getVariable ["movePoints", []] isEqualTo []) };
+_obiect_orb = objNull;
+if (isServer) then
+{
+	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
+	[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+}
+else
+{
+	_obiect_orb = "Sign_Sphere10cm_F" createVehiclelocal (getPos _baseObj);
+};
 
-_obiect_orb = "Sign_Sphere10cm_F" createVehiclelocal (getPos _baseObj);
-_obiect_orb setObjectMaterialGlobal [0, "\a3\data_f\default.rvmat"];
-_obiect_orb setObjectTextureGlobal [0, "#(argb,8,8,3)color(1,1,1,0.5,ca)"];
 _obiect_orb hideObject true;
 
+_posSmoother = "Land_HelipadEmpty_F" createVehiclelocal (getPos _baseObj);
+_posSmoother hideObject true;
 
 
-sleep 3;
+
+//sleep 3;
 
 
 
@@ -99,7 +109,7 @@ if (hasInterface) then
 	};
 
 
-
+	/*
 	[_baseObj, _obiect_orb] spawn
 	{
 		params ["_baseObj", "_obiect_orb"];
@@ -139,49 +149,109 @@ if (hasInterface) then
 		};
 
 	};
+	*/
 
 };
 
 
 
-[_baseObj, _obiect_orb] spawn
+[_obiect_orb, _posSmoother, _radius] spawn
 {
-	params ["_baseObj", "_obiect_orb"];
+	params ["_obiect_orb", "_posSmoother", "_radius"];
 
-	_pollInterval = if (hasInterface) then {0.033} else {0.25};
+	_xMod = 3 + random 3;
+	_yMod = 3 + random 3;
+	_zMod = 0.5 + random 0.25;
 
-	while {alive _baseObj and {alive _obiect_orb}} do
+	_xyFreqSkew = 8;
+
+	if (hasInterface) then
 	{
-		_points = _baseObj getVariable ["movePoints", []];
-		_pointCount = count _points;
+		while {alive _posSmoother and {alive _obiect_orb}} do
+		{
+			_time = time / 2;
+			_curXFreqSkew = (sin _time) * _xyFreqSkew;
+			_curYFreqSkew = (cos _time) * _xyFreqSkew;
+			_xCycle = sin (_time * (_xMod + _curXFreqSkew));
+			_yCycle = cos (_time * (_yMod + _curYFreqSkew));
 
-		_minTime = (_points#0#0);
-		_maxTime = _points#(count _points - 1)#0;
-		_timespan = _maxTime - _minTime;
-		_curElapsed = time - _minTime;
-		_fraction = _curElapsed / _timespan;
+			_basePos = getPosATL _posSmoother;
+			_obiect_orb setPosATL [_basePos#0 + (_xCycle * _radius), _basePos#1 + (_yCycle * _radius), _basePos#2 + (sin (_time * _zMod)) + 60];
 
-		_pos = _fraction bezierInterpolation (_points apply {_x#1});
+			_distance = _obiect_orb distance player;
+			sleep (((_distance * 0.0004) max 0.0333) min 2);
 
-		_jitter = ((_fraction - (1 / ((_pointCount - 1) max 1))) max 0) * ((_pointCount - 1) max 1);
-		_jitter = (((_jitter - 0.75) * 4) max 0)*6;
-		_jitterVec = [random _jitter, random _jitter, random _jitter];
+		};
+	}
+	else
+	{
+		while {alive _posSmoother and {alive _obiect_orb}} do
+		{
+			_time = time / 2;
+			_curFreqSkew = (sin _time) * _xyFreqSkew;
+			_xCycle = sin (_time * (_xMod + _curFreqSkew));
+			_yCycle = cos (_time * (_yMod + _curFreqSkew));
 
-		_obiect_orb setPosATL (_pos vectorAdd _jitterVec);
-		_obiect_orb setVariable ["jitter", _jitter];
+			_basePos = getPosASL _posSmoother;
+			_obiect_orb setPosASL [_basePos#0 + (_xCycle * _radius), _basePos#1 + (_yCycle * _radius), _basePos#2 + sin (_time * _zMod)];
 
-		_curPollInterval = if (hasInterface) then {if (player distance _obiect_orb > var_megaSparkyAnomaly_visibleDistance) then {1} else {_pollInterval}} else {_pollInterval};
+			_distance = _obiect_orb distance player;
+			sleep 0.5;
 
-		sleep _curPollInterval;
+		};
 
 	};
 
-
 };
 
 
+[_baseObj, _posSmoother, _radius] spawn
+{
+	params ["_baseObj", "_posSmoother", "_radius"];
 
-//sleep 3;
+	_lastRun = time;
+	_maxVel = _radius * 0.25;
+
+	if (hasInterface) then
+	{
+		while {alive _baseObj and {alive _posSmoother}} do
+		{
+			_movement = _maxVel * (time - _lastRun);
+			_smootherPos = getPosASL _posSmoother;
+			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
+			_distance = (_posSmoother distance _baseObj) min _movement;
+			_moveVec = _dirVec vectorMultiply _distance;
+
+			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
+
+			_lastRun = time;
+			_plyDist = _posSmoother distance player;
+			sleep (((_plyDist * 0.0004) max 0.0333) min 2);
+
+		};
+
+	}
+	else
+	{
+		while {alive _baseObj and {alive _posSmoother}} do
+		{
+			_movement = _maxVel * (time - _lastRun);
+			_smootherPos = getPosASL _posSmoother;
+			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
+			_distance = (_posSmoother distance _baseObj) min _movement;
+			_moveVec = _dirVec vectorMultiply _distance;
+
+			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
+
+			_lastRun = time;
+			sleep 0.5;
+
+		};
+
+	};
+
+};
+
 
 
 
@@ -265,7 +335,7 @@ waitUntil
 
 	sleep 1;
 
-	(!(alive _baseObj)) or {!(alive _obiect_orb)}
+	(!(alive _baseObj)) or {!(alive _obiect_orb)} or {!(alive _posSmoother)}
 
 };
 
@@ -280,3 +350,4 @@ if (isServer) then
 
 deleteVehicle _baseObj;
 deleteVehicle _obiect_orb;
+deleteVehicle _posSmoother;
