@@ -31,4 +31,5 @@ class miscShared
     class onGigEnabled{};
     class gigEffects{};
     class createPlayerSpawner{};
+    class hoverer{};
 };

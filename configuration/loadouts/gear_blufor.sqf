@@ -39,6 +39,14 @@ CREATE_LOADOUT(co,_baseLoadout);
 COPY_ADDONS(co,rif);
 
 
+// pistolero
+
+_baseLoadout = [[],[],["rhs_weap_tt33","","","",["rhs_mag_762x25_8",8],[],""],["UK3CB_CHC_C_U_HIKER_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2],["rhs_mag_762x25_8",2,8]]],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(co,_baseLoadout);
+COPY_ADDONS(pist,rif);
+
+
 // Le Chef
 
 _baseLoadout = [["Cre8ive_Rfl_CV_557","","","",["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5],[],""],[],[],["UK3CB_CHC_C_U_DOC_01",[["ACE_elasticBandage",4],["ACE_morphine",1],["ACE_splint",2],["ACE_tourniquet",2]]],["UK3CB_V_Pouch",[["Cre8ive_Mag_CV_557_5Rnd_Tracer_Red",5,5]]],[],"UK3CB_H_Turban_Neckwrap_01_Whi","",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
