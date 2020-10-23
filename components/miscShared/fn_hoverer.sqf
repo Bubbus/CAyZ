@@ -5,6 +5,7 @@ params ["_unit"];
 if (isServer) then
 {
     _unit hideObjectGlobal true;
+	[_unit, 100, 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
 };
 
 if (hasInterface) then
