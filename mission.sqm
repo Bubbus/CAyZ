@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=2543;
+		nextID=2546;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=20;
+		nextID=22;
 	};
 	class Camera
 	{
-		pos[]={15633.52,406.1467,14689.903};
-		dir[]={-0.075337537,-0.69798511,0.71216244};
-		up[]={-0.073428474,0.71610659,0.6941148};
-		aside[]={0.99447042,-1.3303361e-007,0.10520317};
+		pos[]={15738.176,331.97507,14947.682};
+		dir[]={0.13345163,-0.52600116,0.83994979};
+		up[]={0.082536124,0.85048336,0.51948553};
+		aside[]={0.98761284,9.1968104e-009,-0.1569124};
 	};
 };
 binarizationWanted=0;
@@ -13062,18 +13062,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15424.371,8.0719929,17564.289};
-				angles[]={0,5.1741743,0};
+				position[]={15424.371,8.0724707,17564.289};
+				angles[]={0,5.1741681,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="sound_blaster_1";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1847;
 			type="Land_PortableGenerator_01_black_F";
+			atlOffset=0.00047779083;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13109,7 +13111,6 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				name="sound_blaster_1";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -13235,7 +13236,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="sound_blaster_2";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -27417,6 +27417,7 @@ class Mission
 			class Attributes
 			{
 				name="gigPowerCabinet";
+				disableSimulation=1;
 			};
 			id=2381;
 			type="PowerGenerator_EP1";
@@ -34413,6 +34414,7 @@ class Mission
 					};
 					id=2540;
 					type="B_soldier_M_F";
+					atlOffset=-9.1552734e-005;
 					class CustomAttributes
 					{
 						class Attribute0
