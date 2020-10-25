@@ -805,122 +805,142 @@ _jamming =
 
 ["[CayZ] Jamming", "Radio Jammer (5km)", _jamming] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\creepy_sound_01.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Creepy Sound 01", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\creepy_sound_02.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Creepy Sound 02", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\creepy_sound_03.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Creepy Sound 03", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\creepy_sound_04.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Creepy Sound 04", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\creepy_sound_05.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Creepy Sound 05", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\demonic_noise_01.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Demonic Noise 01", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\demonic_noise_02.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Demonic Noise 02", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\ghost_01.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Ghost 01", _creepySound] call zen_custom_modules_fnc_register;
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\heartbeat_01.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
 ["[CayZ] SFX", "Heartbeat 01", _creepySound] call zen_custom_modules_fnc_register;
 
 
-_creepySound = 
+_creepySound =
 {
     params ["_pos"];
 
-    _object = "Land_Football_01_F" createVehicle _pos;
+    _object = "Land_HelipadEmpty_F" createVehicle _pos;
 
     playSound3D [getMissionPath "\sounds\wind_noise_01.ogg", _object];
+
+	_object spawn {sleep 20; deleteVehicle _this};
 
 };
 
