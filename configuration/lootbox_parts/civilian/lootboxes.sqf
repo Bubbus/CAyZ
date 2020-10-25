@@ -33,6 +33,9 @@ ADD_TO_LOOTBOX(civ_worker_clothes,CHANCE_OF(_civ_highTierVests,BLUE));
 CREATE_LOOTBOX(civ_fancy_clothes);
 ADD_TO_LOOTBOX(civ_fancy_clothes,MULTIPLE(_civ_fancyClothes,3));
 
+CREATE_LOOTBOX(civ_dorime);
+ADD_TO_LOOTBOX(civ_dorime,_civ_dorime);
+
 
 // Supplies
 
@@ -65,3 +68,4 @@ ADD_TO_LOOTBOX(civ_med_large,_med_lowtier_large);
 ADD_TO_LOOTBOX(civ_med_large,CHANCE_OF(_med_hightier_tiny,WHITE));
 ADD_TO_LOOTBOX(civ_med_large,CHANCE_OF(_med_lowtier_small,WHITE));
 ADD_TO_LOOTBOX(civ_med_large,_med_tools);
+
