@@ -2,11 +2,10 @@
 #include "macros.hpp"
 
 if (missionNamespace getVariable ['gigActive', false]) exitWith {};
+missionNamespace setVariable ['gigActive', true, true];
 
 RUN_ON_SERVER(f_fnc_onGigEnabled,_this);
 RUN_AS_ASYNC(f_fnc_onGigEnabled);
-
-missionNamespace setVariable ['gigActive', true, true];
 
 params ["_object"];
 

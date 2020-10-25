@@ -2,83 +2,47 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// SIDE: WEST
+// FACTION: NATO
 
 // ====================================================================================
 
-//Creating simple tasks.
-//Previous examples for task creation were needlessly complicated, they don't need to be. Whilst the completion of one is handled by 
-//triggers in game, it can sometimes be enough to just have them be present on a players journal, it directs them, and keeps players on task.
+// TASKS
+// The code below creates tasks. Two (commented-out) sample tasks are included.
+// Note: tasks should be entered into this file in reverse order.
 
-//It is good practice to create them in the sides briefing file, as this means it seperates them neatly, without the creation of further files.
+// _task2 = player createSimpleTask ["OBJ_2"];
+// _task2 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
+// _task2 setSimpleTaskDestination WAYPOINTLOCATION;
+// _task2 setTaskState "Created";
 
-//Tasks follow this style:
+// _task1 = player createSimpleTask ["OBJ_1"];
+// _task1 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
+// _task1 setSimpleTaskDestination WAYPOINTLOCATION;
+// _task1 setTaskState "Created";
 
-//[civilian,["task1"],["Do this and you get a cookie","Earn Cookie","cookiemarker"],[0,0,0],1,2,true] call BIS_fnc_taskCreate
-//[west,["task2"],["Good luck finding this cookie","Find Cookie","cookiemarker2"],objNull,1,3,true] call BIS_fnc_taskCreate //Task without a map location
 
-//However, we don't use the civilian or west terms, as this is the western briefing file, instead, we can do something like this:
 
-//[group player, "AANorth", ["Destroy the AA present in Northern Aliabad", "Destroy the AA", "AANorth"], "AANorth", true] call BIS_fnc_taskCreate;
-//[group player, "AASouth", ["Destroy the AA present in Southern Aliabad", "Destroy the AA", "AASouth"], "AASouth", true] call BIS_fnc_taskCreate;
-
-//The two above would create two tasks for the Blufor team, it would create tasks for any player who also has this file directed at them, this is why 
-//it is better to handle tasks in the side's relevant briefing file. For the completion of tasks, refer to the trigger present on the framework's mission.sqm 
-//in game.
-// ====================================================================================
-
-// NOTES: CREDITS
-// The code below creates the administration sub-section of notes.
-
-_cre = player createDiaryRecord ["diary", ["Credits","
-<br/>
-*** Insert mission credits here. ***
-<br/><br/>
-Made with F3 (http://www.ferstaberinde.com/f3/en/)
-"]];
-
-// ====================================================================================
-
-// NOTES: ADMINISTRATION
-// The code below creates the administration sub-section of notes.
-
-_adm = player createDiaryRecord ["diary", ["Administration","
-<br/>
-*** Insert information on administration and logistics here. ***
-"]];
-
-// ====================================================================================
-
-// NOTES: EXECUTION
-// The code below creates the execution sub-section of notes.
-
-_exe = player createDiaryRecord ["diary", ["Execution","
-<br/>
-COMMANDER'S INTENT
-<br/>
-*** Insert very short summary of plan here. ***
-<br/><br/>
-MOVEMENT PLAN
-<br/>
-*** Insert movement instructions here. ***
-<br/><br/>
-FIRE SUPPORT PLAN
-<br/>
-*** Insert fire support instructions here. ***
-<br/><br/>
-SPECIAL TASKS
-<br/>
-*** Insert instructions for specific units here. ***
-"]];
 
 // ====================================================================================
 
 // NOTES: MISSION
 // The code below creates the mission sub-section of notes.
 
-_mis = player createDiaryRecord ["diary", ["Mission","
+_mis = player createDiaryRecord ["diary", ["Ruminations","
 <br/>
-*** Insert the mission here. ***
+
+<br/>
+It all changed when the bad weather came. Some took to the winds differently but most who breathed the tangy, metallic air when it washed over Kintyre from the east were maddened, left to prey upon those who were in shelter. The winds settled and lay heavy over the lowest land, leaving those in the hills to survey the new hordes. Yet, the hordes were not as bad as those the wind merely whispered to.
+<br/>
+
+<br/>
+A swift military response dealt with most of the afflicted - the remaining growing feral, swift and uncontrollable. However, feuds emerged on how to deal with looters, the new landscape and the afflicted in their own ranks. With higher command seemingly unreachable and tempers fraying uncharacteristically quickly, factions began to emerge.
+<br/>
+
+<br/>
+The winds brought with them more than a bitter taste - ships have run aground, aircraft have ceased to fly overhead and those who go north for help have yet to return. Those who remain are learning, adapting and praying.
+<br/>
+
 "]];
 
 // ====================================================================================
@@ -88,15 +52,15 @@ _mis = player createDiaryRecord ["diary", ["Mission","
 
 _sit = player createDiaryRecord ["diary", ["Situation","
 <br/>
-*** Insert general information about the situation here.***
-<br/><br/>
-ENEMY FORCES
+Good news CA! The pandemic is done north of the border, and just in time for Halloween! Meat Up attendees flock to christen a new hill in the Mull of Kintyre - meat roasts, festivities occur and as night falls, sleep claims you all one by one.
 <br/>
-*** Insert information about enemy forces here.***
-<br/><br/>
-FRIENDLY FORCES
+
 <br/>
-*** Insert information about friendly forces here.***
+...
+<br/>
+
+<br/>
+The Meat Up wakes at once as dawn rises, but something is amiss. The fires have been dead for days, the meat is starting to spoil and the beers are warm. As you start to address this terrible fate, you begin to realise how bad it is. All the cars are dead, nobody's phones have signal. The only lead is the camp leader's emergency radio which, as the hour strikes, begins to speak...
 "]];
 
 // ====================================================================================

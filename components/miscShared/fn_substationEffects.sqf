@@ -4,6 +4,9 @@
 CLIENT_ONLY;
 RUN_AS_ASYNC(f_fnc_substationEffects);
 
+if (missionNamespace getVariable ["local_substationEffects", false]) exitWith {};
+missionNamespace setVariable ["local_substationEffects", true];
+
 _transformers = (getMarkerPos "substation_marker") nearObjects ["Land_Trafostanica_velka", 100];
 
 _transformerEffect =

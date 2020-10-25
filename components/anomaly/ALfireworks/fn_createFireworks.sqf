@@ -19,7 +19,7 @@ _launcher setVariable ["launchingFireworks", true, true];
 		_projLife = random [1, 1.4, 1.9];
 		[_launcher, _projLife] remoteExec ["f_fnc_createFireworkRocket"];
 
-		sleep (1.8 + random 0.4);
+		sleep (2.5 + random 0.4);
 	};
 
 	_launcher setVariable ["launchingFireworks", nil, true];

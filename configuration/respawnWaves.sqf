@@ -57,10 +57,10 @@ SET_RESPAWN_WAVE_COOLDOWN(west,300);
 SET_RESPAWN_WAVE_READY(west,true);
 
 // Important: Place anything with a comma inside it into a separate line.  This is a technical limitation.
-_squads = ["DELTA","ECHO","FOXTROT","GOLF","HOTEL"];
+_squads = ["Doomed","Eerie","Forsaken","Ghosts","Haunted"];
 SET_RESPAWN_WAVE_SQUADS(west,_squads);
 
-_message = "Reinforcements have arrived.";
+_message = "The dead rise again...";
 SET_RESPAWN_MESSAGE(west,_message);
 
 

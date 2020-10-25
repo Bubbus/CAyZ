@@ -29,14 +29,14 @@ if (hasInterface) then
         while {alive _unit} do
         {
             _basePos = getPosASL _unit;
-            _floater setPosASL [_basePos#0 + sin (time * _xMod), _basePos#1 + cos (time * _yMod), _basePos#2 + sin (time * _zMod)];
+            _floater setPosASL [_basePos#0 + sin (serverTime * _xMod), _basePos#1 + cos (serverTime * _yMod), _basePos#2 + sin (serverTime * _zMod)];
 
             _dir = [cos _ang, sin _ang, 0];
-            _ang = time mod 360;
+            _ang = serverTime mod 360;
             _floater setVectorDir _dir;
 
             _distance = _floater distance player;
-            sleep (((_distance * 0.001666) max 0.0333) min 2);
+            sleep ((((_distance - 150) * 0.001666) max 0.0333) min 2);
         };
 
     };

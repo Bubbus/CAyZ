@@ -80,7 +80,6 @@ ADD_TO_LOOTGROUP(_group, ITEMS("Cre8ive_GeigerScout",RANGE(1,3)));
 ADD_TO_LOOTGROUP(_group, ITEM("U_B_CBRN_Suit_01_MTP_F"));
 ADD_TO_LOOTGROUP(_group, BACKPACK("B_SCBA_01_F"));
 ADD_TO_LOOTGROUP(_group, ITEM("G_AirPurifyingRespirator_02_sand_F"));
-ADD_TO_LOOTGROUP(_group, ITEM("UK3CB_BAF_V_Pilot_A"));
 _med_crbn_large = _group;
 
 // END: Meds

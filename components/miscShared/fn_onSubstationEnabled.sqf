@@ -2,14 +2,12 @@
 #include "macros.hpp"
 
 if (missionNamespace getVariable ['substationActive', false]) exitWith {};
+missionNamespace setVariable ['substationActive', true, true];
 
 RUN_ON_SERVER(f_fnc_onSubstationEnabled,_this);
 RUN_AS_ASYNC(f_fnc_onSubstationEnabled);
 
-missionNamespace setVariable ['substationActive', true, true];
-
 params ["_object"];
-
 
 [_object, ["EXP_m07_lightsOn_01", 100]] remoteExec ["say3D"];
 [true, "lightsmarker", 1500] spawn f_fnc_setLampsOn;

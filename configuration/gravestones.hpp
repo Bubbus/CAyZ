@@ -33,14 +33,14 @@
 //#define GRAVESTONES_ALLOW_PRIORITY_ONLY 1
 
 // The amount of corpses which can exist before gravestones start to appear.
-#define MAX_CORPSES_BEFORE_GRAVESTONES 20
+#define MAX_CORPSES_BEFORE_GRAVESTONES 10
 
 // The normal amount of time a corpse will lie around before being gravestoned.
 #define GRAVESTONE_CORPSE_TIMEOUT 60
 
 // The amount of corpses which can exist before the normal corpse 'lifetime' will be ignored.
 // After this amount is reached, corpses are immediately deleted until the amount returns below this value again.
-#define MAX_CORPSES_PANIC_MODE 30
+#define MAX_CORPSES_PANIC_MODE 40
 
 // The timestep at which the grave manager runs.  May improve performance when increased if lots of corpses exist at a time.
 #define GRAVESTONE_MANAGER_INTERVAL 5

@@ -25,13 +25,13 @@ while {alive _obj_sursa} do
 	};
 
 	player setVariable ["inFartyAnomaly", true, true];
-	player setVariable ["lastOkInFarty", time, true];
+	player setVariable ["lastOkInFarty", serverTime, true];
 
 	while {_isInRadius and {alive _obj_sursa}} do
 	{
 		if ((player getVariable ["protejat_tox", false]) or {player getVariable ["f_var_isZeus", false]}) then
 		{
-			player setVariable ["lastOkInFarty", time, true];
+			player setVariable ["lastOkInFarty", serverTime, true];
 			sleep (1.2 + random 1)
 		}
 		else
@@ -76,10 +76,10 @@ while {alive _obj_sursa} do
 
 			};
 
-			if ((time - (player getVariable ["lastOkInFarty", time])) > (random [20, 25, 30])) then
+			if ((serverTime - (player getVariable ["lastOkInFarty", serverTime])) > (random [20, 25, 30])) then
 			{
 				[player, true, 20, true] call ace_medical_fnc_setUnconscious;
-				player setVariable ["lastOkInFarty", time + 20, true];
+				player setVariable ["lastOkInFarty", serverTime + 20, true];
 			};
 
 			sleep 4;

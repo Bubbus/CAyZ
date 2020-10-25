@@ -108,94 +108,73 @@ if (hasInterface) then
 
 	};
 
-
-	/*
-	[_baseObj, _obiect_orb] spawn
-	{
-		params ["_baseObj", "_obiect_orb"];
-
-		waitUntil {sleep 1; _obiect_orb getVariable ["jitter", -1] >= 0};
-
-		_nodeTime = _baseObj getVariable "timePerNode";
-		_jitterTrigger = 0.05;
-		_lastJitter = 0;
-
-		while {alive _obiect_orb} do
-		{
-			waitUntil
-			{
-				sleep 0.033;
-
-				_curJitter = _obiect_orb getVariable ["jitter", -1];
-
-				if (_lastJitter > _curJitter) then
-				{
-					_sparkSound = false;
-					_sunet_spark = ["sparks_1_mega","sparks_2_mega","sparks_3_mega","sparks_4_mega","sparks_5_mega"] call BIS_fnc_selectRandom;
-					_obiect_orb say3D [_sunet_spark, 900];
-				};
-
-				_lastJitter = _curJitter;
-				_curJitter >= _jitterTrigger
-
-			};
-
-			_sparkSound = true;
-
-			_obiect_orb say3D ["puls_bass", 1200];
-
-			sleep 0.5;
-
-		};
-
-	};
-	*/
-
 };
 
 
 
-[_obiect_orb, _posSmoother, _radius] spawn
+
+[_baseObj, _obiect_orb, _posSmoother, _radius] spawn
 {
-	params ["_obiect_orb", "_posSmoother", "_radius"];
+	params ["_baseObj", "_obiect_orb", "_posSmoother", "_radius"];
 
-	_xMod = 3 + random 3;
-	_yMod = 3 + random 3;
-	_zMod = 0.5 + random 0.25;
+	if (isServer) then
+	{
+		private _xMod = 3 + random 3;
+		private _yMod = 3 + random 3;
+		private _zMod = random 10;
 
-	_xyFreqSkew = 8;
+		_baseObj setVariable ["spark_xMod", _xMod, true];
+		_baseObj setVariable ["spark_yMod", _yMod, true];
+		_baseObj setVariable ["spark_zMod", _zMod, true];
+
+	};
+
+	private _xyFreqSkew = 8;
 
 	if (hasInterface) then
 	{
+		waitUntil
+		{
+			sleep 0.25;
+			(!(alive _baseObj)) or {(_baseObj getVariable ["spark_zMod", -1]) >= 0}
+		};
+
+		private _xMod = _baseObj getVariable ["spark_xMod", 0];
+		private _yMod = _baseObj getVariable ["spark_yMod", 0];
+		private _zMod = _baseObj getVariable ["spark_zMod", 0];
+
 		while {alive _posSmoother and {alive _obiect_orb}} do
 		{
-			_time = time / 2;
-			_curXFreqSkew = (sin _time) * _xyFreqSkew;
-			_curYFreqSkew = (cos _time) * _xyFreqSkew;
-			_xCycle = sin (_time * (_xMod + _curXFreqSkew));
-			_yCycle = cos (_time * (_yMod + _curYFreqSkew));
+			private _time = serverTime;
+			private _curXFreqSkew = ((sin _time) * _xyFreqSkew) / _time;
+			private _curYFreqSkew = ((cos _time) * _xyFreqSkew) / _time;
+			private _xCycle = sin (_time * (_xMod + _curXFreqSkew));
+			private _yCycle = cos (_time * (_yMod + _curYFreqSkew));
 
-			_basePos = getPosATL _posSmoother;
-			_obiect_orb setPosATL [_basePos#0 + (_xCycle * _radius), _basePos#1 + (_yCycle * _radius), _basePos#2 + (sin (_time * _zMod)) + 60];
+			private _basePos = getPosATL _posSmoother;
+			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 60];
 
-			_distance = _obiect_orb distance player;
-			sleep (((_distance * 0.0004) max 0.0333) min 2);
+			private _distance = _obiect_orb distance player;
+			sleep ((((_distance - var_sparkyAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
 
 		};
 	}
 	else
 	{
+		private _xMod = _baseObj getVariable ["spark_xMod", 0];
+		private _yMod = _baseObj getVariable ["spark_yMod", 0];
+		private _zMod = _baseObj getVariable ["spark_zMod", 0];
+
 		while {alive _posSmoother and {alive _obiect_orb}} do
 		{
-			_time = time / 2;
-			_curFreqSkew = (sin _time) * _xyFreqSkew;
-			_xCycle = sin (_time * (_xMod + _curFreqSkew));
-			_yCycle = cos (_time * (_yMod + _curFreqSkew));
+			private _time = serverTime;
+			private _curFreqSkew = (sin _time) * _xyFreqSkew;
+			private _xCycle = sin (_time * (_xMod + _curFreqSkew));
+			private _yCycle = cos (_time * (_yMod + _curFreqSkew));
 
-			_basePos = getPosASL _posSmoother;
-			_obiect_orb setPosASL [_basePos#0 + (_xCycle * _radius), _basePos#1 + (_yCycle * _radius), _basePos#2 + sin (_time * _zMod)];
+			private _basePos = getPosASL _posSmoother;
+			_obiect_orb setPosASL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + sin (_time * _zMod)];
 
-			_distance = _obiect_orb distance player;
 			sleep 0.5;
 
 		};
@@ -203,20 +182,22 @@ if (hasInterface) then
 	};
 
 };
+
+
 
 
 [_baseObj, _posSmoother, _radius] spawn
 {
 	params ["_baseObj", "_posSmoother", "_radius"];
 
-	_lastRun = time;
+	_lastRun = serverTime;
 	_maxVel = _radius * 0.25;
 
 	if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (time - _lastRun);
+			_movement = _maxVel * (serverTime - _lastRun);
 			_smootherPos = getPosASL _posSmoother;
 			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
 			_distance = (_posSmoother distance _baseObj) min _movement;
@@ -224,7 +205,7 @@ if (hasInterface) then
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
-			_lastRun = time;
+			_lastRun = serverTime;
 			_plyDist = _posSmoother distance player;
 			sleep (((_plyDist * 0.0004) max 0.0333) min 2);
 
@@ -235,7 +216,7 @@ if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (time - _lastRun);
+			_movement = _maxVel * (serverTime - _lastRun);
 			_smootherPos = getPosASL _posSmoother;
 			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
 			_distance = (_posSmoother distance _baseObj) min _movement;
@@ -243,7 +224,7 @@ if (hasInterface) then
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
-			_lastRun = time;
+			_lastRun = serverTime;
 			sleep 0.5;
 
 		};
